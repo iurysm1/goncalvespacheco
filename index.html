@@ -23,36 +23,42 @@
                             <span onclick=animacao() id="toggle-icon" class="fas fa-bars fa-lg" style="color: #ffffff;" ></span>
                         </button>
                         <div class="offcanvas offcanvas-end navbar-toggler" id="navbarNav">
-                            
-                            <ul class="navbar-nav m-auto">
-                                <img src="imagens/logonavbar.png" alt="logo da empresa">
-                                <li class="nav-item" id="activenavitem" >
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">O escritório</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">Áreas de atuação</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">Nossos profissionais</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">Publicações</a>
-                                </li>
-                                <li class="nav-item">
-                                <a class="nav-link" href="#">Contato</a>
-                                </li>
-                            </ul>
+                            <div style="max-height: 900px; overflow-y: auto;">
+                                <ul class="navbar-nav m-auto">
+                                    <img class="m-3" src="imagens/logooffcanvas64px.png" alt="logo da empresa">
+                                    <li class="nav-item" id="activenavitem" >
+                                    <a class="nav-link" aria-current="page" href="#">HOME</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">ESCRITÓRIO</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">ATUAÇÃO</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">PROFISSIONAIS</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">PUBLICAÇÕES</a>
+                                    </li>
+                                    <li class="nav-item">
+                                    <a class="nav-link" href="#">CONTATO</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </nav>
                 </div>
                 <div class="col m-auto">
-                  <img src="imagens/Clear Sans (1).png" alt="logo da empresa">
+                    <picture>
+                        <source media="(max-width: 590px)" srcset="imagens/logo68px.png" type="image/png">
+                        <source media="(max-width: 900px)" srcset="imagens/logo90px.png" type="image/png">
+                        <img src="imagens/logonavbar137px.png" alt="logo da empresa">
+                    </picture>
+                  
                 </div>
                 <div class="col-2 m-auto">
-                    <a id="idioma" href="#"><span style="color: #ffffff;">EN</span>  </a> 
+                    <a href="#"><span id="idioma" style="color: #ffffff; font-weight: 500;">EN</span>  </a> 
                 </div>
             </div>
         </div>
@@ -60,22 +66,22 @@
             <div class="offcanvas offcanvas-end" id="navbarNavDesktop">
                 <ul class="navbar-nav m-auto">
                     <li class="nav-item" id="activenavitem" >
-                    <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active text-white" aria-current="page" href="#">HOME</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link text-white" href="#">O escritório</a>
+                    <a class="nav-link text-white" href="#">ESCRITÓRIO</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Áreas de atuação</a>
+                    <a class="nav-link text-white" href="#">ATUAÇÃO</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Nossos profissionais</a>
+                    <a class="nav-link text-white" href="#">PROFISSIONAIS</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Publicações</a>
+                    <a class="nav-link text-white" href="#">PUBLICAÇÕES</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Contato</a>
+                    <a class="nav-link text-white" href="#">CONTATO</a>
                     </li>
                 </ul>
             </div>
