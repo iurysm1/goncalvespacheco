@@ -8,7 +8,31 @@ var navbarNav=document.getElementById('navbarNav');
         animacao(); 
     }
   })
-  
+
+  function isElementVisible(element) {
+    var rect = element.getBoundingClientRect();
+    var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    return (rect.top <= windowHeight && rect.bottom >= 0);
+  }
+
+
+
+  window.addEventListener('scroll', function() {
+      var currentScrollPosition = window.scrollY;
+
+      if (!isElementVisible(document.getElementById('navbarTop'))) {
+          document.getElementById('navbarBot').classList.add('fixado')
+
+          
+      } else {
+          document.getElementById('navbarBot').classList.remove('fixado')
+
+      }
+
+
+  });
+
   
   function animacao() {
     var iconElement = document.getElementById('toggle-icon');
