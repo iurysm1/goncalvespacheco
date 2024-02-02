@@ -19,7 +19,6 @@ var navbarNav=document.getElementById('navbarNav');
 
 
   window.addEventListener('scroll', function() {
-      var currentScrollPosition = window.scrollY;
 
       if (!isElementVisible(document.getElementById('navbarTop'))) {
           document.getElementById('navbarBot').classList.add('fixado')
