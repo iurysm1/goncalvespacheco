@@ -58,7 +58,7 @@ footer li{
     transition: transform 0.5s ease;
 }
 #redes span:hover{
-    transform: scale(1.8)
+    transform: scale(1.2)
 }
 
 #horarioemail{
