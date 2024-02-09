@@ -4,15 +4,15 @@
     box-sizing: border-box;
 }
 
-html>section{
+html>.slider-main{
     overflow-x: hidden;
 }
 
-section>img{
+.slider-main>img{
     user-select: none;
 }
 
-section{
+.slider-main{
     overflow-x: hidden;
     position: relative;
     font-family: 'Montserrat';
@@ -84,7 +84,7 @@ section .logo a img{
     transition: opacity 2s ease-in-out;
 }
 
-.container{
+.slider-main .container{
     position: relative;
     left: calc(50% - 1140px/2);
     width: 50%;
@@ -185,7 +185,7 @@ section .logo a img{
         line-height: 28px;
         margin-bottom: 22px;
     }
-    .container{
+    .slider-main .container{
         left: calc(50%-(920px/2));
         padding-block: 80px;
         max-width: 475px;
@@ -197,6 +197,37 @@ section .logo a img{
 
     }
 }
+
+.prev-button, .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    
+    
+}
+
+.prev-button:hover, .next-button:hover{
+    transform: rotateY(180g);
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.735);
+
+}
+
+.prev-button {
+    left: 10px;
+}
+
+.next-button {
+    right: 10px;
+}
+
 
 @media screen and (max-width:991px){
     .logo a img {width: 210px;}
@@ -210,7 +241,7 @@ section .logo a img{
         line-height: 26px;
         margin-bottom: 18px;
     }
-    .container{
+    .slider-main .container{
         left: calc(50%-(720px/2));
         padding-block: 70px;
         max-width: 405px;
@@ -240,7 +271,7 @@ section .logo a img{
     }
 
 
-    .container{
+    .slider-main .container{
         position: unset;
         padding-block: 70px;
         max-width: 540x;
@@ -278,7 +309,7 @@ section .logo a img{
     }
 
 
-    .container{
+    .slider-main .container{
         padding: 50px 20px;
         max-width: 100%;
     }
