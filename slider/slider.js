@@ -4,37 +4,41 @@ const slider = document.querySelector('.slider-images');
 
 const images = Array.from(slider.children);
 
-let imageIndex=0;
-
-document.addEventListener("DOMContentLoaded", function() {
-    updateSlider()
-});
+let imageIndex=0
+let pauserSlide;
 
 function updateSlider(){
+
+    if(imageIndex+1>images.length-1){
+        imageIndex=0
+    }else{
+        imageIndex=imageIndex+1
+    }
+
     images.forEach(image=>{
         image.classList.remove('active','previous','next','inactive')
     });
 
     images[imageIndex].classList.add('active');
 
-    if (imageIndex - 1 >= 0) {
-        images[imageIndex - 1].classList.add('previous');
-    } else {
-        images[images.length - 1].classList.add('previous');
-    }
-    
-
-    if(imageIndex+1<images.length){
-        images[imageIndex+1].classList.add('next')
-    }else{
+    if(imageIndex+1>images.length-1){
         images[0].classList.add('next')
+    }else{
+        images[imageIndex+1].classList.add('next')
+    }
+
+    if (imageIndex - 1 < 0) {
+        images[images.length-1].classList.add('previous');
+    } else {
+        images[imageIndex - 1].classList.add('previous');
     }
     
-    images.forEach((image,index)=>{
-        if(index!==imageIndex&&index!==(imageIndex-1+images.length)%images.length&&index!==(imageIndex+1)%images.length){
+    images.forEach(image=>{
+        if(!image.classList.contains('next')&&!image.classList.contains('previous')&&!image.classList.contains('active')){
             image.classList.add('inactive')
         }
-    })
+        }
+    )
 
     backgrounds.forEach((background)=>{
         background.style.opacity=0;
@@ -43,24 +47,25 @@ function updateSlider(){
     if(images[imageIndex].classList.contains('active')){
         backgrounds[imageIndex].style.opacity=1;
     }
-
-    imageIndex=(imageIndex+1)%images.length;
 }
 
 
 
 function prevSlide(){
+
+    if (imageIndex - 1 >= 0) {
+        imageIndex=imageIndex-1;
+    } else {
+        imageIndex=images.length - 1;
+    }
+
     images.forEach(image=>{
         image.classList.remove('active','previous','next','inactive');
     });
 
+    console.log("index active: "+imageIndex)
     images[imageIndex].classList.add('active');
 
-    if (imageIndex + 1 < images.length) {
-        images[imageIndex + 1].classList.add('next');
-    } else {
-        images[0].classList.add('next');
-    }
     
     if (imageIndex - 1 >= 0) {
         images[imageIndex - 1].classList.add('previous');
@@ -68,11 +73,18 @@ function prevSlide(){
         images[images.length - 1].classList.add('previous');
     }
 
-    images.forEach((image,index)=>{
-        if(index!==imageIndex&&index!==(imageIndex-1+images.length)%images.length&&index!==(imageIndex+1)%images.length){
-            image.classList.add('inactive');
+    if (imageIndex + 1 < images.length) {
+        images[imageIndex + 1].classList.add('next');
+    } else {
+        images[0].classList.add('next');
+    }
+
+    images.forEach(image=>{
+        if(!image.classList.contains('next')&&!image.classList.contains('previous')&&!image.classList.contains('active')){
+            image.classList.add('inactive')
         }
-    });
+        }
+    )
 
     backgrounds.forEach((background)=>{
         background.style.opacity = 0;
@@ -82,18 +94,23 @@ function prevSlide(){
         backgrounds[imageIndex].style.opacity = 1;
     }
 
-    imageIndex = (imageIndex - 1 + images.length) % images.length;
+
 }
 
+startSlider()
 
-updateSlider()
+function pauseSlider(){
+    clearInterval(pauserSlide)
+}
 
-//setInterval(updateSlider,5000);
+function startSlider(){
+    pauserSlide=setInterval(updateSlider,7000)
+}
 
+const classePauseSlide = document.querySelectorAll('.sliderFuncionarios');
 
-console.log(images[3].getAttribute('alt'))
+classePauseSlide.forEach(slider => {
+    slider.addEventListener('mouseenter', pauseSlider);
+    slider.addEventListener('mouseleave', startSlider);
+});
 
-images[0].classList.add('next')
-images[1].classList.add('inactive')
-images[2].classList.add('previous')
-images[3].classList.add('active')
