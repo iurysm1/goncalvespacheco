@@ -1,0 +1,164 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300&display=swap');
+
+
+/*header {
+  position: fixed;
+  bottom: 1;
+  left: 0;
+  width: 100%;
+  background-color: #0B3660;
+  padding: 10px; 
+  z-index: 1000; 
+}*/
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+#barraNavegacao{
+    background-color: #0B3660;
+}
+
+#navbarTop{
+    height: 150px;
+}
+
+#navbarTopConteudos{
+    
+    height: 100%;
+}
+
+
+#idioma{
+  font-size: larger;
+}
+
+#idioma:hover{
+  color: #668CAB;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.123);
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+  color: #ffffff;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+
+
+@keyframes iconChange {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+.icon-change-animation {
+  animation: iconChange 0.5s ease-in-out;
+}
+
+
+#navbarNavDesktop .nav-item{
+  margin: 0px 30px;
+  height: 50px;
+  position: relative;
+  text-decoration: none;
+  
+}
+
+.fixado{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0B3660;
+  padding: 10px;
+  z-index: 1000;
+}
+
+#navbarNavDesktop .nav-item::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; 
+  height: 2px; 
+  background-color: #ffffff;
+  border-radius: 5px; 
+  box-shadow: 1px 1px 9px rgba(255, 255, 255, 0.1);;
+  transition: width 0.3s ease;
+}
+
+#activenavitem::before{
+  width: 100% !important;
+}
+
+
+
+#navbarNavDesktop a{
+  font-size: 100%;
+  
+}
+
+#navbarNavDesktop a:hover{
+  text-shadow: 1px 1px 9px rgba(255, 255, 255, 0.1);
+}
+
+
+#navbarNavDesktop .nav-item:hover::before{
+  width: 100%
+
+}
+
+
+#logomobilenavbar{
+  transform: scale(1.2);
+}
+
+#navbarNav .nav-item{
+  margin: 20px 0px;
+  height: 50px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+}
+
+#navbarNav ul{
+  width: 70%;
+  margin: auto !important;
+}
+
+#navbarNav img{
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+#navbarNav .nav-item::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0; 
+  height: 2px; 
+  background-color: #0B3660;
+  border-radius: 5px; 
+  box-shadow: 1px 1px 9px #0b356037;
+  transition: width 0.3s ease;
+  width: 100%;
+}
