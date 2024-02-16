@@ -7,6 +7,14 @@ const images = Array.from(slider.children);
 let imageIndex=0
 let pauserSlide;
 
+var nome = document.getElementById('nomeFuncionario');
+var sobre = document.getElementById('sobreFuncionario');
+
+document.addEventListener("DOMContentLoaded", function() {
+    nome.style.opacity=1;
+    sobre.style.opacity=1;
+});
+
 function updateSlider(){
 
     if(imageIndex+1>images.length-1){
@@ -47,6 +55,8 @@ function updateSlider(){
     if(images[imageIndex].classList.contains('active')){
         backgrounds[imageIndex].style.opacity=1;
     }
+    trocarDados()
+    
 }
 
 
@@ -93,7 +103,7 @@ function prevSlide(){
     if(images[imageIndex].classList.contains('active')){
         backgrounds[imageIndex].style.opacity = 1;
     }
-
+    trocarDados()
 
 }
 
@@ -113,4 +123,47 @@ classePauseSlide.forEach(slider => {
     slider.addEventListener('mouseenter', pauseSlider);
     slider.addEventListener('mouseleave', startSlider);
 });
+
+
+function trocarDados(){
+    var facebook = document.getElementById('fbFuncionario');
+    var instagram = document.getElementById('igFuncionario');
+    
+    
+    images.forEach(image=>{
+        if(image.classList.contains("active")){
+            var altFoto = image.alt;
+        switch (altFoto){
+            case 'luana':
+                nome.style.opacity=0;
+                sobre.style.opacity=0;
+                
+                setTimeout(() => {
+                nome.style.opacity=1;
+                sobre.style.opacity=1;
+                nome.textContent="LUANA SILVEIRA MARQUES"
+                sobre.textContent="Advogada. Especialista em Direito Imobiliário. Formada pela Universidade do Vale do Itajaí - UNIVALI. Inscrita na Ordem dos Advogados do Brasil com o nº 49.290. Pós-graduada em Direito e Negócios Imobiliários pelo Complexo de Ensino Superior de Santa Catarina - CESUSC. Pós graduanda em Direito Ambiental e Urbanístico. Direito Tributário - Fundação Getúlio Vargas - FGV Auditora do TJD - Tribunal de Justiça do Futebol de SC. Ex-Presidente da Subcomissão Jovem Advocacia da 30° Subseção - OAB/SC. Ex-Presidente da Comissão de Direito Imobiliário da 30° Subseção - OAB/SC."
+                }, 900);
+                
+                break;
+
+            case 'luana2':
+                nome.style.opacity=0;
+                sobre.style.opacity=0;
+                
+                setTimeout(() => {
+                nome.style.opacity=1;
+                sobre.style.opacity=1;
+                nome.textContent="MARLON TESTONI BATISTI"
+                sobre.textContent="Sócio. Formado pela Universidade do Sul de Santa Catarina - UNISUL. Inscrito na Ordem dos Advogados do Brasil com o n. 32.631. Pós-graduado em Direito Material e Processual do Trabalho pela Faculdade de Direito Damásio de Jesus. Pós-graduado em Direito Constitucional pela Anhanguera. Ex-Assessor Jurídico do Município de Imbituba/SC. Ex-Procurador do Município de Imbituba. Ex-Assessor Jurídico da Presidência da Câmara Municipal de Imbituba. Membro da Associação Catarinense dos Advogados Trabalhistas - ACAT. Delegado da Caixa de Assistência dos Advogados de Santa Catarina (gestão 2019/2021 e 2022/2024). Diretor Jurídico da Associação Empresarial de Imbituba desde 2019."
+                }, 900);
+                
+                break;
+                
+        }
+        }
+        
+        
+    })
+}
 
