@@ -41,19 +41,15 @@ function updateSlider(){
         images[imageIndex - 1].classList.add('previous');
     }
     
-    images.forEach(image=>{
-        if(!image.classList.contains('next')&&!image.classList.contains('previous')&&!image.classList.contains('active')){
-            image.classList.add('inactive')
-        }
-        }
-    )
-
     backgrounds.forEach((background)=>{
-        background.style.opacity=0;
-    })
+        background.style.opacity = 0;
+        background.classList.remove('backgroundprevious-change-animation')
+        background.classList.remove('background-change-animation')
+    });
 
     if(images[imageIndex].classList.contains('active')){
-        backgrounds[imageIndex].style.opacity=1;
+        backgrounds[imageIndex].style.opacity = 1;
+        backgrounds[imageIndex].classList.add('background-change-animation')
     }
     trocarDados()
     
@@ -98,10 +94,13 @@ function prevSlide(){
 
     backgrounds.forEach((background)=>{
         background.style.opacity = 0;
+        background.classList.remove('backgroundprevious-change-animation')
+        background.classList.remove('background-change-animation')
     });
 
     if(images[imageIndex].classList.contains('active')){
         backgrounds[imageIndex].style.opacity = 1;
+        backgrounds[imageIndex].classList.add('backgroundprevious-change-animation')
     }
     trocarDados()
 
@@ -118,7 +117,7 @@ function startSlider(){
 }
 
 const classePauseSlide = document.querySelectorAll('.sliderFuncionarios');
-
+s
 classePauseSlide.forEach(slider => {
     slider.addEventListener('mouseenter', pauseSlider);
     slider.addEventListener('mouseleave', startSlider);
@@ -147,7 +146,7 @@ function trocarDados(){
                 
                 break;
 
-            case 'luana2':
+            case 'marlon':
                 nome.style.opacity=0;
                 sobre.style.opacity=0;
                 
@@ -156,6 +155,18 @@ function trocarDados(){
                 sobre.style.opacity=1;
                 nome.textContent="MARLON TESTONI BATISTI"
                 sobre.textContent="Sócio. Formado pela Universidade do Sul de Santa Catarina - UNISUL. Inscrito na Ordem dos Advogados do Brasil com o n. 32.631. Pós-graduado em Direito Material e Processual do Trabalho pela Faculdade de Direito Damásio de Jesus. Pós-graduado em Direito Constitucional pela Anhanguera. Ex-Assessor Jurídico do Município de Imbituba/SC. Ex-Procurador do Município de Imbituba. Ex-Assessor Jurídico da Presidência da Câmara Municipal de Imbituba. Membro da Associação Catarinense dos Advogados Trabalhistas - ACAT. Delegado da Caixa de Assistência dos Advogados de Santa Catarina (gestão 2019/2021 e 2022/2024). Diretor Jurídico da Associação Empresarial de Imbituba desde 2019."
+                }, 900);
+                
+                break;
+            case 'felipe':
+                nome.style.opacity=0;
+                sobre.style.opacity=0;
+                
+                setTimeout(() => {
+                nome.style.opacity=1;
+                sobre.style.opacity=1;
+                nome.textContent="FELIPE MARLONDREY BALTAZAR CARDOSO"
+                sobre.textContent="Advogado, Formado pelo Centro Universitário Barriga Verde – UNIBAVE, Inscrito na Ordem dos Advogados do Brasil sob o nº 51.237. Com atuação profissional no Município de Treze de Maio e Região. Pós-Graduando em Direito Administrativo – Damásio Educacional, Criciúma/SC. Membro da Comissão de Direito Público da 6ª Subseção da OAB/SC – Tubarão."
                 }, 900);
                 
                 break;

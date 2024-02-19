@@ -55,8 +55,7 @@ section .logo a img{
 
 
 .slider-main{
-    min-height: 700px;
-    background: radial-gradient(50% 50% at 50% 50%, #C7F6D0 0%, #7CB686 92.19%);
+    min-height: 700px;   
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,7 +82,7 @@ section .logo a img{
     width: 100%;
     height: 100%;
     opacity: 0;
-    transition: opacity 2s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .slider-main .container{
@@ -159,8 +158,7 @@ section .logo a img{
 }
 
 .slider-images{
-    position: relative; width: 50%; height: 100%;
-    top: 0;
+    position: relative; width: 100%; height: 100%;
 }
 
 .slider-images > img{
@@ -187,7 +185,7 @@ section .logo a img{
 #sobreFuncionario{
     opacity: 0;
     transition: opacity 1s ease;
-    width: 576px; 
+    width: 550px; 
     height: 264px; 
 }
 
@@ -246,6 +244,32 @@ section .logo a img{
 .next-button {
     right: 10px;
 }
+
+.background-change-animation {
+    animation: iconChange 1.5s ease-in-out;
+  }
+
+  @keyframes iconChange {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .backgroundprevious-change-animation {
+    animation: iconChangePrevious 1.5s ease-in-out;
+  }
+
+  @keyframes iconChangePrevious {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
 
 
 @media screen and (max-width:991px){
