@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/08a72f5c5b.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="slider/slider.css">
+    <style>
+    </style>
+</head>
+<body>
+    <section class="slider-main swiper" id="sliderHome">
+        <div class="container sliderFuncionarios">
+            <div class="slider-content-wrap">                    
+                <div class="slider-content">
+                    <h2 class="heading-style-2" id="nomeFuncionario">LUANA SILVEIRA MARQUES</h2>
+                    <p id="sobreFuncionario">Advogada. Especialista em Direito Imobiliário. Formada pela Universidade do Vale do Itajaí - UNIVALI. Inscrita na Ordem dos Advogados do Brasil com o nº 49.290. Pós-graduada em Direito e Negócios Imobiliários pelo Complexo de Ensino Superior de Santa Catarina - CESUSC. Pós graduanda em Direito Ambiental e Urbanístico. Direito Tributário - Fundação Getúlio Vargas - FGV Auditora do TJD - Tribunal de Justiça do Futebol de SC. Ex-Presidente da Subcomissão Jovem Advocacia da 30° Subseção - OAB/SC. Ex-Presidente da Comissão de Direito Imobiliário da 30° Subseção - OAB/SC.</p>
+                    <ul class="example-2">
+                        <li class="icon-content">
+                          <a id="LinkInstagramSlider" target="_blank" data-social="instagram" aria-label="Instagram" href="https://instagram.com/">
+                            <div class="filled"></div>
+                            <i class="fa fa-instagram fa-lg"></i>
+                          </a>
+                          <div class="tooltip">Instagram</div>
+                        </li>
+                        <li class="icon-content">
+                          <a id="LinkFacebookSlider" data-social="facebook" aria-label="Facebook" href="https://telegram.org/">
+                            <div class="filled"></div>
+                            <i class="fa fa-facebook fa-lg"></i>
+                          </a>
+                          <div class="tooltip">Facebook</div>
+                        </li>
+                    </ul>
+                      
+                </div>
+            </div>
+        </div>
+        <div class="slider-images sliderFuncionarios">
+            <img src="imagens/colaboradores/luana.png" alt="luana" class="slider-image active">
+            <img src="imagens/colaboradores/marlon.png" alt="marlon" class="slider-image next">
+            <img src="imagens/colaboradores/felipe.png" alt="felipe" class="slider-image inactive">
+            <img src="imagens/colaboradores/luana.png" alt="luana4" class="slider-image previous">
+        </div>
+        <div id="backgrounds">
+            <div class="background" style="background-image: url('./imagens/colaboradores/luana.svg'); background-position: 71.5%; opacity: 1;"></div>
+            <div class="background" style="background-image: url('./imagens/colaboradores/marlon.svg');  background-position: 70.5%;"></div>
+            <div class="background" style="background-image: url('./imagens/colaboradores/felipe.svg');background-position: 71.5%;"></div>
+            <div class="background" style="background-image: url('./imagens/colaboradores/marlon.svg');background-position: 70%;"></div>
+
+        </div>
+    </section>
+
+
+    <script src="slider/slider.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+    </script>
+</body>
+</html>

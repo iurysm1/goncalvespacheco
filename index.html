@@ -19,9 +19,12 @@
             <div class="row m-auto" id="navbarTopConteudos">
                 <div class="col-2 m-auto">
                     <nav class="navbar navbar-expand-lg">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                            <span onclick=animacao() id="toggle-icon" class="fas fa-bars fa-lg" style="color: #ffffff;" ></span>
-                        </button>
+                            <input type="checkbox" id="checkbox" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                            <label for="checkbox" class="toggle">
+                                <div class="bars" id="bar1"></div>
+                                <div class="bars" id="bar2"></div>
+                                <div class="bars" id="bar3"></div>
+                            </label>
                         <div class="offcanvas offcanvas-end navbar-toggler" id="navbarNav">
                             <div style="max-height: 900px; overflow-y: auto;">
                                 <ul class="navbar-nav m-auto">
@@ -89,23 +92,31 @@
     </header>
 
     <main>
-        <section class="slider-main">
+        <section class="slider-main" id="sliderHome">
             <button class="prev-button sliderFuncionarios" onclick="prevSlide()">&#10094;</button>
             <button class="next-button sliderFuncionarios" onclick="updateSlider()">&#10095;</button>
             <div class="container sliderFuncionarios">
-                
-                <div class="logo">
-                    <a href="#"></a>
-                </div>
-                <div class="slider-content-wrap">
-                    
+                <div class="slider-content-wrap">                    
                     <div class="slider-content">
                         <h2 class="heading-style-2" id="nomeFuncionario">LUANA SILVEIRA MARQUES</h2>
                         <p id="sobreFuncionario">Advogada. Especialista em Direito Imobiliário. Formada pela Universidade do Vale do Itajaí - UNIVALI. Inscrita na Ordem dos Advogados do Brasil com o nº 49.290. Pós-graduada em Direito e Negócios Imobiliários pelo Complexo de Ensino Superior de Santa Catarina - CESUSC. Pós graduanda em Direito Ambiental e Urbanístico. Direito Tributário - Fundação Getúlio Vargas - FGV Auditora do TJD - Tribunal de Justiça do Futebol de SC. Ex-Presidente da Subcomissão Jovem Advocacia da 30° Subseção - OAB/SC. Ex-Presidente da Comissão de Direito Imobiliário da 30° Subseção - OAB/SC.</p>
-                        <div class="social-icons">
-                            <a href="https://www.facebook.com/goncalvespachecoadvogados/" target="_blank" id="fbFuncionario"><span class="fa fa-facebook fa-lg"></span></a>
-                            <a href="https://www.instagram.com/goncalvespachecoadv/" target="_blank" id="igFuncionario"><span class="fa fa-instagram fa-lg"></span></a>
-                        </div>
+                        <ul class="example-2">
+                            <li class="icon-content">
+                              <a id="LinkInstagramSlider" target="_blank" data-social="instagram" aria-label="Instagram" href="https://instagram.com/">
+                                <div class="filled"></div>
+                                <i class="fa fa-instagram fa-lg"></i>
+                              </a>
+                              <div class="tooltip">Instagram</div>
+                            </li>
+                            <li class="icon-content">
+                              <a id="LinkFacebookSlider" data-social="facebook" aria-label="Facebook" href="https://telegram.org/">
+                                <div class="filled"></div>
+                                <i class="fa fa-facebook fa-lg"></i>
+                              </a>
+                              <div class="tooltip">Facebook</div>
+                            </li>
+                        </ul>
+                          
                     </div>
                 </div>
             </div>
@@ -116,10 +127,10 @@
                 <img src="imagens/colaboradores/luana.png" alt="luana4" class="slider-image previous">
             </div>
             <div id="backgrounds">
-                <div class="background" style="background-image: url('./imagens/colaboradores/luana.svg'); background-size:inherit; background-position: 71.5%; background-repeat: no-repeat; opacity: 1;"></div>
-                <div class="background" style="background-image: url('./imagens/colaboradores/marlon.svg'); background-size:inherit; background-position: 71%; background-repeat: no-repeat;"></div>
-                <div class="background" style="background-image: url('./imagens/colaboradores/felipe.svg'); background-size:inherit; background-position: 71.5%; background-repeat: no-repeat;"></div>
-                <div class="background" style="background-image: url('./imagens/colaboradores/marlon.svg'); background-size:inherit; background-position: 70%; background-repeat: no-repeat;"></div>
+                <div class="background" style="background-image: url('./imagens/colaboradores/luana.svg'); background-position: 71.5%; opacity: 1;"></div>
+                <div class="background" style="background-image: url('./imagens/colaboradores/marlon.svg');  background-position: 70.5%;"></div>
+                <div class="background" style="background-image: url('./imagens/colaboradores/felipe.svg');background-position: 71.5%;"></div>
+                <div class="background" style="background-image: url('./imagens/colaboradores/marlon.svg');background-position: 70%;"></div>
 
             </div>
         </section>

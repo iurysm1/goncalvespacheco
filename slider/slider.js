@@ -10,6 +10,7 @@ let pauserSlide;
 var nome = document.getElementById('nomeFuncionario');
 var sobre = document.getElementById('sobreFuncionario');
 
+
 document.addEventListener("DOMContentLoaded", function() {
     nome.style.opacity=1;
     sobre.style.opacity=1;
@@ -117,7 +118,7 @@ function startSlider(){
 }
 
 const classePauseSlide = document.querySelectorAll('.sliderFuncionarios');
-s
+
 classePauseSlide.forEach(slider => {
     slider.addEventListener('mouseenter', pauseSlider);
     slider.addEventListener('mouseleave', startSlider);
@@ -125,8 +126,9 @@ classePauseSlide.forEach(slider => {
 
 
 function trocarDados(){
-    var facebook = document.getElementById('fbFuncionario');
-    var instagram = document.getElementById('igFuncionario');
+    var facebook = document.getElementById('LinkFacebookSlider');
+    var instagram = document.getElementById('LinkInstagramSlider');
+    
     
     
     images.forEach(image=>{
@@ -136,6 +138,8 @@ function trocarDados(){
             case 'luana':
                 nome.style.opacity=0;
                 sobre.style.opacity=0;
+                facebook.href="https://instagram.com/luanamarques0";
+                instagram.href="https://instagram.com/luanamarques0";
                 
                 setTimeout(() => {
                 nome.style.opacity=1;

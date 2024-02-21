@@ -65,10 +65,10 @@ footer li{
     height: 299 !important;
 }
 
-.fa-instagram:hover {
+footer .fa-instagram:hover {
     color: #E1306C;
  }
- .fa-facebook:hover{
+ footer .fa-facebook:hover{
     color: #1877F2;
  }
 
