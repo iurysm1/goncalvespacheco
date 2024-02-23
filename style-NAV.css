@@ -58,22 +58,6 @@ a{
   box-shadow: none;
 }
 
-
-
-@keyframes iconChange {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
-
-.icon-change-animation {
-  animation: iconChange 0.5s ease-in-out;
-}
-
-
 #navbarNavDesktop .nav-item{
   margin: 0px 30px;
   height: 50px;
