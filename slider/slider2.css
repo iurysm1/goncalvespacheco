@@ -7,6 +7,7 @@ body{
 
 section{
     background-color: white;
+    height: 800px;
 }
 
 
@@ -20,7 +21,6 @@ section{
     position: relative;
     font-family: 'Montserrat';
     text-align: justify;
-    height: 100svh;
 }
 
 #sliderConteudo{
@@ -266,12 +266,20 @@ section>p{
   .example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
     background-color: #1877F2;
   }
+
+ #sobreTooltip{
+    display: none;
+ }
+
+@media screen and (max-width: 1385px) {
+    #nomeFuncionario{
+        font-size: 1.9vw;
+    }
+}
   
 
 @media screen and (max-width: 1680px){
-    #nomeFuncionario{
-
-    }
+    
 
     #sobreFuncionario{
         font-size: 1vw;
@@ -281,10 +289,6 @@ section>p{
 }
 
 @media screen and (max-width:1199px){
-    .heading-style-2{
-        font-size: 30px;
-        margin-bottom: 30px;
-    }
 
     .slider-content{
         padding: 0;
@@ -421,6 +425,174 @@ section>p{
     
 }
 
-@media screen and (max-width:575px){
-    
+@media screen and (max-width:706px){
+    .row{
+        display: block;
+    }
+    #descricaoSlider{
+        padding: 0px;
+    }
+    #nomeFuncionario{
+        text-align: center;
+        font-size: 4vw;
+        height: auto;
+        margin-top: 50px;
+    }
+    #sobreFuncionario{
+        font-size: 2vw;
+        height: 190px;
+    }
+    #imagemSlider{
+        padding: 0px;
+        height: 400px;
+    }
+
+    .background{
+        background-size: 70%;
+    }
+
+    .next{
+        transform: translate(-80%, 30%) scale(0.4) !important;
+    }
+
+    .previous{
+        transform: translate(80%, 30%) scale(0.4) !important;
+    }
+
+    .inactive{
+        transform: translate(0%, 100%) scale(0.1) !important;
+
+    }
 }
+
+@media screen and (max-width:600px){
+    #sobreFuncionario{
+        font-size: 2.3vw;
+    }
+}
+
+@media screen and (max-width:425px){
+    
+    .background{
+        background-size: 119%;
+    }
+
+    #sliderHome{
+        height: 640px;
+    }
+
+    #sobreFuncionario, #nomeFuncionario, .example-2{
+        display: none;
+    }
+
+    #sliderConteudo{
+        width: 100%;
+    }
+
+    .row{
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    #nomeFuncionarioMobile{
+        margin: 20px 0;
+        color: #000000;
+        font-weight: 900;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 1s ease;
+        text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.1);
+        font-size: 5.6vw;
+        height: 58px;
+    }
+
+    #sobreTooltip{
+        margin: 30px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tooltip {
+        opacity: 1;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+      }
+      
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+      
+      .tooltiptext {
+        visibility: hidden;
+        width: 300px;
+        background-color: #0b3560ea;
+        color: #fff;
+        text-align: justify;
+        border-radius: 5px;
+        padding: 20px;
+        position: absolute;
+        z-index: 1;
+        top: 130%;
+        left: 50%;
+        margin-left: -150px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.231);
+        max-height: 350px;
+        overflow: scroll;
+      }
+      
+      .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        margin-left: -10px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #0b3560ea transparent;
+      }
+      
+      .tooltip .icon {
+        font-weight: bold;
+        font-size: 20px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: #0B3660;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.231);
+      }
+      
+}
+
+@media screen and (max-width:375px){
+    .active{
+        transform: scale(0.7) !important;
+    }
+    #sliderHome{
+        height: 540px;
+    }
+
+    #sobreTooltip{
+        margin: 0;
+    }
+    .row{
+        height: 540px;
+        padding: 20px;
+    }
+    #nomeFuncionarioMobile{
+        margin: 0;
+    }
+}
+
+

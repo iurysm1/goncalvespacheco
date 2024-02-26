@@ -1,16 +1,19 @@
 @charset "UTF-8";
 
-*{
-    box-sizing: border-box;
+
+body{
+    background-color: #4d4d4d !important;
 }
 
-html>.slider-main{
-    overflow-x: hidden;
+section{
+    background-color: white;
+    height: 800px;
 }
+
+
 
 .slider-main>img{
     user-select: none;
-    
 }
 
 .slider-main{
@@ -18,7 +21,12 @@ html>.slider-main{
     position: relative;
     font-family: 'Montserrat';
     text-align: justify;
-    height: 100svh;
+}
+
+#sliderConteudo{
+    display: inline-block;
+    overflow: hidden;
+
 }
 
 
@@ -33,14 +41,25 @@ section>p{
 }
 
 .slider-main{
-    min-height: 700px;   
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    overflow: hidden;
+    display: block;
     position: relative;
     z-index: 1;
+    overflow: hidden;
+
+}
+
+#sliderHome .row{
+    height: 800px;
+    padding: 0 40px;
+}
+
+#sliderHome .col{
+    padding: 40px;
+}
+
+.slider-content{
+    margin: auto;
+    padding-left: 200px;
 }
 
 
@@ -52,124 +71,130 @@ section>p{
     z-index: -1;
 }
 
+#imagemSlider{
+    position: relative;
+    padding: 0 200px;
+
+}
+
+#backgroundImage,
+#backgrounds, .background{
+    position: absolute; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#backgroundImage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#backgroundImage img{
+    position: absolute;
+}
+
+#backgrounds {
+    z-index: -11; 
+}
 
 .background{
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
     filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.231));
-    align-items: center;
     background-repeat: no-repeat;
     background-size:inherit;
-    background-position: 71%;
-}
-
-.slider-main .container{
-    position: relative;
-    left: calc(50% - 1140px/2);
-    width: 100%;
-    padding-block: 100px;
-    max-width: 600px;
-    height: 100%;
-    margin: 0px;
-    margin-right: 500px;
-}
-
-.slider-content-warp{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%;
+    background-position: 50%;
 }
 
 .slider-images>img.next{
     opacity: 1;
     transition: 2s;
     filter: blur(35px);
-    left: 0;
-    top: 90%;
-    transform: translate(-50%, -50%) scale(0.3);
+    transform: translate(180%,-50%) scale(0.6);
 }
 
 .slider-images>img.active{
     opacity: 1;
     transition: 2s;
     filter: blur(0px) drop-shadow(10px 7px 5px rgba(0, 0, 0, 0.231));
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%) scale(1.8);
+    transform: scale(1.1);
     z-index: 1;
+    margin: auto;
 }
 
 .slider-images>img.previous{
     opacity: 1;
-    transition: 2s;
+    transition: 1.5s;
     filter: blur(25px);
-    left: 95%;
-    top: 90%;
+    transform: translate(180%,50%) scale(0.6);
 }
 
 .slider-images>img.inactive{
     opacity: 0;
-    transition: 2s;
+    transition: 3s;
     filter: blur(35px);
-    left: 100%;
-    top: 100%;
-    transform: translate(10%,10%) scale(0.3);
+    transform: translate(300%,50%) scale(0.1);
 }
 
-.slider-images{
-    position: relative; width: 100%; height: 100%;
-}
 
 .slider-images > img{
-    position: absolute;
-    top: 1;
-    left: 100%;
     filter: blur(25px);
-    transform: translate(-50%, -50%), scale(1.2);
     transition: opacity 3s;
-    object-fit: cover;
-    max-width: 593px;
-    max-height: 779px;
-    height: 100%;
-    min-height: 320px;
 }
 
 #nomeFuncionario{
     color: #000000;
     font-weight: 900;
-    line-height: 50px;
     margin-bottom: 20px;
     text-align: start;
-    font-size: 49px;
     opacity: 0;
     transition: opacity 1s ease;
-    height: 100px;
     text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.1);
+    font-size: 2.2vw;
 }
 #sobreFuncionario{
+    height: 260px;
     opacity: 0;
+    font-size: 100%;
     transition: opacity 1s ease;
-    width: 500px; 
-    height: 264px; 
     text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.1);
-    margin-bottom: 75px;
-    
+    margin-bottom: 15px;
+    font-size: 0.8vw;
+
+}
+
+#sobreFuncionario::-webkit-scrollbar {
+    width: 8px;
+}
+
+#sobreFuncionario::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px; 
+
+}
+
+#sobreFuncionario::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+
+}
+
+#sobreFuncionario::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
 
   .example-2 {
-    width: 500px; 
-    padding: 0px;
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 80px;
+    padding: 0;
   }
   .example-2 .icon-content {
     margin: 0 10px;
@@ -241,32 +266,38 @@ section>p{
   .example-2 .icon-content a[data-social="facebook"] ~ .tooltip {
     background-color: #1877F2;
   }
+
+ #sobreTooltip{
+    display: none;
+ }
+
+@media screen and (max-width: 1385px) {
+    #nomeFuncionario{
+        font-size: 1.9vw;
+    }
+}
   
 
+@media screen and (max-width: 1680px){
+    
 
+    #sobreFuncionario{
+        font-size: 1vw;
+        overflow: scroll;
+        padding: 8px;
+    }
+}
 
 @media screen and (max-width:1199px){
-    .logo a img {width: 230px;}
-    .heading-style-2{
-        font-size: 30px;
-        line-height: 45px;
-        margin-bottom: 30px;
+
+    .slider-content{
+        padding: 0;
+        padding-left: 80px;
     }
 
-    .slider-images{
-        margin-left: 50px;
-    }
-    
-    .slider-main .container{
-        left: calc(50%-(920px/2));
-        padding-block: 0px;
-        max-width: 475px;
-        margin: 150px;
-    }
-    .slider-images > img {
-        width: 170px;
-        height: auto;
-        aspect-ratio: 1/1.3;
+    #imagemSlider{
+        padding: 0;
+        padding-right:80px;
     }
 
     #nomeFuncionario{
@@ -274,9 +305,23 @@ section>p{
         height: 60px;
     }
 
+    .active{
+        transform: scale(0.8) !important;
+    }
+
+    .next{
+        transform: translate(120%, -50%) scale(0.6) !important;
+    }
+    .previous{
+        transform: translate(120%, 50%) scale(0.6) !important;
+    }
+
     .background{
-        background-position: 105%;
-        background-size: 50%;
+        background-size: 90%;
+    }
+
+    #sobreFuncionario{
+        font-size: 1.3vw;
     }
    
 }
@@ -339,123 +384,222 @@ section>p{
 
 
 @media screen and (max-width:991px){
+
     #nomeFuncionario{
-        font-size: 22px;
-        line-height: 24px;
-        width: 360px;
-        margin: 0 0 10px 0;
+        font-size: 3vw;
     }
     #sobreFuncionario{
-        font-size: 15px;
-        width: 360px;
-        line-height: 24px;
-        margin-bottom: 10px;
-        height: 384px;
+        overflow: auto;
+        font-size: 1.7vw;
+        height: 300px;
+        padding: 5px;
     }
-    .slider-main .container{
-        max-width: 405px;
-        margin: 0px;
-        margin-left: 200px;
-
-    }
-
-    .example-2{
-        width: 360px;
-        margin-top: 20px;
-    }
-
-    .active{
-        transform: translateY(-50%) translateX(-30%) scale(.8) !important;
-         
-    }
-
     .next{
-        transform: translateY(-25%) translateX(-30%) scale(0.2) !important;
+        transform: translate(100%, -50%) scale(0.6) !important;
     }
-
-    .slider-images{
-        width: 45%;
+    .previous{
+        transform: translate(100%, 50%) scale(0.6) !important;
     }
-
-    .slider-images > img {
-        width: auto;
-        height: auto;
-    }
-
 
     .background{
-        background-position: 95%;
+        background-size: 120%;
     }
+
 }
 
 @media screen and (max-width:767px){
-    .logo a img {width: 200px;}
-    .logo a {margin-bottom: 20px;}
-    .slider-main{
-        flex-direction: column; min-height: 900px;
+
+    .active{
+        transform: scale(0.7) !important;
+    }
+    .next{
+        transform: translate(80%, -50%) scale(0.4) !important;
+    }
+    .previous{
+        transform: translate(80%, 50%) scale(0.4) !important;
     }
 
-    .social-icons a{
-        width: 35px;
-        height: 35px;
+    .background{
+        background-size: 115%;
+    }
+    
+}
+
+@media screen and (max-width:706px){
+    #sliderHome .row{
+        display: block;
+    }
+    #descricaoSlider{
+        padding: 0px;
+    }
+    #nomeFuncionario{
+        text-align: center;
+        font-size: 4vw;
+        height: auto;
+        margin-top: 50px;
+    }
+    #sobreFuncionario{
+        font-size: 2vw;
+        height: 190px;
+    }
+    #imagemSlider{
+        padding: 0px;
+        height: 400px;
     }
 
-
-    .slider-main .container{
-        position: unset;
-        padding-block: 70px;
-        max-width: 540x;
-        width: 100%;
-        margin: 0px;
-
+    .background{
+        background-size: 70%;
     }
 
-    .slider-images{
-        width: 100%;
+    .next{
+        transform: translate(-80%, 30%) scale(0.4) !important;
     }
 
-    .slider-images > img {
-        width: 380px;
-        aspect-ratio: 1/1.3;
-        width: auto;
+    .previous{
+        transform: translate(80%, 30%) scale(0.4) !important;
+    }
+
+    .inactive{
+        transform: translate(0%, 100%) scale(0.1) !important;
+
     }
 }
 
-@media screen and (max-width:575px){
-    .logo a {margin-bottom: 20px;}
-    .heading-style-2{
-        font-size: 30px;
-        line-height: 40px;
-        margin-bottom: 20px;
-    }
-
-    section p{
-        font-size: 15px;
-        line-height: 24px;
-        margin-bottom: 16px;
-    }
-
-
-    .slider-main .container{
-        padding: 50px 20px;
-        max-width: 100%;
-        margin: 0px;
-    }
-
-    .slider-images{
-        margin: auto;
-    }
-
-    .slider-images > img {
-        height: 100px;
-    }
-
-    .slider-images >img.active{
-        left: 24%;
-
-    }
-
-    .slider-images>img.previous{
-        top: 100%;
+@media screen and (max-width:600px){
+    #sobreFuncionario{
+        font-size: 2.3vw;
     }
 }
+
+@media screen and (max-width:425px){
+    
+    .background{
+        background-size: 119%;
+    }
+
+    #sliderHome{
+        height: 640px;
+    }
+
+    #sobreFuncionario, #nomeFuncionario, .example-2{
+        display: none;
+    }
+
+    #sliderConteudo{
+        width: 100%;
+    }
+
+    #sliderHome .row{
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+    }
+
+    #nomeFuncionarioMobile{
+        margin: 20px 0;
+        color: #000000;
+        font-weight: 900;
+        text-align: center;
+        opacity: 1;
+        transition: opacity 1s ease;
+        text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.1);
+        font-size: 5.6vw;
+        height: 58px;
+    }
+
+    #sobreTooltip{
+        margin: 30px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tooltip {
+        opacity: 1;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        font-family: "Arial", sans-serif;
+      }
+      
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+      
+      .tooltiptext {
+        visibility: hidden;
+        width: 300px;
+        background-color: #0b3560ea;
+        color: #fff;
+        text-align: justify;
+        border-radius: 5px;
+        padding: 20px;
+        position: absolute;
+        z-index: 1;
+        top: 130%;
+        left: 50%;
+        margin-left: -150px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.231);
+        max-height: 350px;
+        overflow: scroll;
+      }
+      
+      .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        margin-left: -10px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #0b3560ea transparent;
+      }
+      
+      .tooltip .icon {
+        font-weight: bold;
+        font-size: 20px;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: #0B3660;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 30px;
+        box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.231);
+      }
+      #sliderHome .col{
+        padding: 0px;
+    }
+      
+}
+
+@media screen and (max-width:375px){
+    .active{
+        transform: scale(0.7) !important;
+    }
+    #sliderHome{
+        height: 540px;
+    }
+
+    #sobreTooltip{
+        margin: 0;
+    }
+    #sliderHome .row{
+        height: 540px;
+        padding: 20px;
+    }
+    #nomeFuncionarioMobile{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:321px){
+    
+}
+
+
