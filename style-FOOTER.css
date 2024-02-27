@@ -7,6 +7,12 @@ footer{
     background-image: url('imagens/branca137px.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 80%;
+    overflow: hidden;
+}
+
+.p-3 {
+    padding: 0rem!important;
 }
 
 footer h5{
@@ -62,7 +68,7 @@ footer li{
 }
 
 #horarioemail{
-    height: 299 !important;
+    padding-bottom: 20px;
 }
 
 #numero1,#numero2{
@@ -73,12 +79,20 @@ footer li{
     height: auto;
 }
 
+
 footer .fa-instagram:hover {
     color: #E1306C;
  }
  footer .fa-facebook:hover{
     color: #1877F2;
  }
+
+
+@media screen and (max-width: 425px) {
+footer span, footer p, footer li{
+    font-size: 14px;
+}
+}
 
 
 

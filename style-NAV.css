@@ -214,3 +214,43 @@ a{
     display: flex;
   }
 }
+
+#blockToFixHeaderMobile{
+  height: 100px;
+  display: none;
+}
+
+@media screen and (max-width:425px){
+
+  .logoHeader{
+    margin: auto;
+  }
+
+  .colunaLogo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+  }
+
+  .colunaLogo picture{
+    width: auto;
+    transform: scale(0.8) !important;
+
+  }
+
+  #blockToFixHeaderMobile{
+    display: block;
+}
+
+  #navbarTop{
+    height: 100px;
+    position: fixed;
+    z-index: 11;
+    background-color: #0B3660;
+  }
+  #navbarBot{
+    display: none;
+  }
+  
+}

@@ -52,11 +52,11 @@
                         </div>
                     </nav>
                 </div>
-                <div class="col m-auto">
+                <div class="col m-auto colunaLogo">
                     <picture>
-                        <source media="(max-width: 590px)" srcset="imagens/logo68px.png" type="image/png">
-                        <source media="(max-width: 900px)" srcset="imagens/logo90px.png" type="image/png">
-                        <img src="imagens/logonavbar137px.png" alt="logo da empresa">
+                        <source class="logoHeader" media="(max-width: 590px)" srcset="imagens/logo68px.png" type="image/png">
+                        <source class="logoHeader" media="(max-width: 900px)" srcset="imagens/logo90px.png" type="image/png">
+                        <img class="logoHeader" src="imagens/logonavbar137px.png" alt="logo da empresa">
                     </picture>
                   
                 </div>
@@ -92,6 +92,7 @@
     </header>
 
     <main>
+        <div id="blockToFixHeaderMobile"></div>
         <section class="slider-main" id="sliderHome">
             <button class="prev-button sliderFuncionarios" onclick="prevSlide()">&#10094;</button>
             <button class="next-button sliderFuncionarios" onclick="updateSlider()">&#10095;</button>
