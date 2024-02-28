@@ -18,7 +18,7 @@
         <div class="container-fluid text-center" id="navbarTop">
             <div class="row m-auto" id="navbarTopConteudos">
                 <div class="col-2 m-auto">
-                    <nav class="navbar navbar-expand-lg">
+                    <nav class="navbar navbar-expand-lg menuHamburguer">
                             <input type="checkbox" id="checkbox" class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                             <label for="checkbox" class="toggle">
                                 <div class="bars" id="bar1"></div>
@@ -27,10 +27,10 @@
                             </label>
                         <div class="offcanvas offcanvas-end navbar-toggler" id="navbarNav">
                             <div style="max-height: 900px; overflow-y: auto;">
-                                <ul class="navbar-nav m-auto">
-                                    <img class="m-3" src="imagens/logooffcanvas64px.png" alt="logo da empresa">
-                                    <li class="nav-item" id="activenavitem" >
-                                    <a class="nav-link" aria-current="page" href="#">HOME</a>
+                                <ul class="navbar-nav">
+                                    <img src="imagens/logobranca215px.png" alt="logo da empresa">
+                                    <li class="nav-item"  >
+                                    <a id="activenavitem" class="nav-link" aria-current="page" href="#">HOME</a>
                                     </li>
                                     <li class="nav-item">
                                     <a class="nav-link" href="#">ESCRITÓRIO</a>
@@ -54,6 +54,7 @@
                 </div>
                 <div class="col m-auto colunaLogo">
                     <picture>
+                        <source class="logoHeader" media="(max-width: 4252px)" srcset="imagens/logobranca241px.png" type="image/png">
                         <source class="logoHeader" media="(max-width: 590px)" srcset="imagens/logo68px.png" type="image/png">
                         <source class="logoHeader" media="(max-width: 900px)" srcset="imagens/logo90px.png" type="image/png">
                         <img class="logoHeader" src="imagens/logonavbar137px.png" alt="logo da empresa">
@@ -61,13 +62,14 @@
                   
                 </div>
                 <div class="col-2 m-auto">
-                    <a href="#"><span id="idioma" style="color: #ffffff; font-weight: 500;">EN</span>  </a> 
+                    <a href="#"><span id="idioma" style="color: #ffffff; font-weight: 500;">EN</span></a> 
                 </div>
             </div>
         </div>
         <nav class="navbar navbar-expand-lg" id="navbarBot">
             <div class="offcanvas offcanvas-end" id="navbarNavDesktop">
                 <ul class="navbar-nav m-auto">
+
                     <li class="nav-item" id="activenavitem" >
                     <a class="nav-link active text-white" aria-current="page" href="#">HOME</a>
                     </li>

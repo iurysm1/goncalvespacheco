@@ -58,6 +58,8 @@ a{
   box-shadow: none;
 }
 
+
+
 #navbarNavDesktop .nav-item{
   margin: 0px 30px;
   height: 50px;
@@ -111,40 +113,41 @@ a{
 }
 
 
-#logomobilenavbar{
-  transform: scale(1.2);
+
+#navbarNav{
+  width: 50%;
+  background-color: #668CAB;
+  border: none;
 }
+
 
 #navbarNav .nav-item{
   margin: 20px 0px;
   height: 50px;
   position: relative;
   text-decoration: none;
-  width: 100%;
+  width: 98.7%;
+}
+
+.nav-link{
+  color: white;
+  width: auto;
 }
 
 #navbarNav ul{
-  width: 70%;
-  margin: auto !important;
+  margin-top: 40px;
+  width: 100%;
+  text-align: end;
+  padding-right: 15px;
 }
 
 #navbarNav img{
-  margin: auto;
-  margin-bottom: 50px;
+  margin-left: auto;
+  margin-bottom: 15px;
 }
 
-#navbarNav .nav-item::before{
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0; 
-  height: 2px; 
-  background-color: #0B3660;
-  border-radius: 5px; 
-  box-shadow: 1px 1px 9px #0b356037;
-  transition: width 0.3s ease;
-  width: 100%;
+#navbarNav #activenavitem::before{
+  color: white;
 }
 
 #checkbox {
@@ -160,8 +163,13 @@ a{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 5px;
   transition-duration: .5s;
+}
+
+.menuHamburguer{
+  align-items: center;
+  justify-content: center;
 }
 
 .bars {
@@ -222,6 +230,10 @@ a{
 
 @media screen and (max-width:425px){
 
+  #navbarNav{
+    width: 80%;
+  }
+
   .logoHeader{
     margin: auto;
   }
@@ -253,4 +265,18 @@ a{
     display: none;
   }
   
+}
+
+
+@media screen and (max-width:320px){
+
+  .logoHeader{
+    transform: scale(0.8);
+  }
+
+  .bars{
+    width: 100%;
+  }
+
+
 }
