@@ -403,6 +403,9 @@ display: none;
 
 
 @media screen and (max-width:991px){
+    #blockToFixHeaderMobile{
+        display: block;
+    }
 
     #nomeFuncionario{
         font-size: 3vw;
@@ -545,15 +548,14 @@ display: none;
         align-items: center;
     }
 
-    .tooltip {
+    #sobreTooltip .tooltip {
         opacity: 1;
         position: relative;
         display: inline-block;
         cursor: pointer;
-        font-family: "Arial", sans-serif;
       }
       
-      .tooltip:hover .tooltiptext {
+      #sobreTooltip .tooltip:hover .tooltiptext {
         visibility: visible;
         opacity: 1;
       }
@@ -589,18 +591,19 @@ display: none;
         border-color: transparent transparent #0b3560ea transparent;
       }
       
-      .tooltip .icon {
+      #sobreTooltip .tooltip #iconSobreMobile {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 25px;
         display: inline-block;
         width: 30px;
         height: 30px;
-        background-color: #0B3660;
-        color: #fff;
+        color: #0B3660;
         border-radius: 50%;
         text-align: center;
         line-height: 30px;
-        box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.231);
+        filter: drop-shadow(4px 3px 4px rgba(0, 0, 0, 0.231));
+        transition: opacity 1s ease;
+        opacity: 0;
       }
       #sliderHome .col{
         padding: 0px;

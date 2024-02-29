@@ -91,10 +91,18 @@ a{
   transition: width 0.3s ease;
 }
 
-#activenavitem::before{
-  width: 100% !important;
+#navbarNavDesktop #activenavitem::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100% !important; 
+  height: 2px; 
+  background-color: #ffffff;
+  border-radius: 5px; 
+  box-shadow: 1px 1px 9px rgba(255, 255, 255, 0.1);;
+  transition: width 0.3s ease;
 }
-
 
 
 #navbarNavDesktop a{
@@ -109,14 +117,13 @@ a{
 
 #navbarNavDesktop .nav-item:hover::before{
   width: 100%
-
 }
 
 
 
 #navbarNav{
   width: 50%;
-  background-color: #668CAB;
+  background-color: #0b3660;
   border: none;
 }
 
@@ -132,6 +139,18 @@ a{
 .nav-link{
   color: white;
   width: auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-link i{
+  height: 24px;
+  width: 25px;
 }
 
 #navbarNav ul{
@@ -146,7 +165,12 @@ a{
   margin-bottom: 15px;
 }
 
-#navbarNav #activenavitem::before{
+#navbarNav .nav-link:hover{
+  color: white;
+}
+
+#navbarNav .nav-link:active{
+  transform: scale(0.9);
   color: white;
 }
 
@@ -205,6 +229,7 @@ a{
   transition-duration: .5s;
 }
 
+
 #checkbox:checked + .toggle {
   transition-duration: .5s;
   transform: rotate(180deg);
@@ -219,8 +244,22 @@ a{
 @media screen and (max-width:991px){
 
   .toggle{
-    display: flex;
+    display: flex !important;
   }
+
+  #blockToFixHeaderMobile{
+    display: block;
+}
+
+#navbarTop{
+  height: 100px;
+  position: fixed;
+  z-index: 11;
+  background-color: #0B3660;
+}
+#navbarBot{
+  display: none;
+}
 }
 
 #blockToFixHeaderMobile{
@@ -251,19 +290,6 @@ a{
 
   }
 
-  #blockToFixHeaderMobile{
-    display: block;
-}
-
-  #navbarTop{
-    height: 100px;
-    position: fixed;
-    z-index: 11;
-    background-color: #0B3660;
-  }
-  #navbarBot{
-    display: none;
-  }
   
 }
 
