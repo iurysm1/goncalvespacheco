@@ -9,7 +9,6 @@ body{
 
 section{
     background-color: white;
-    height: 800px;
 }
 
 
@@ -28,7 +27,7 @@ section{
 #sliderConteudo{
     display: inline-block;
     overflow: hidden;
-
+    width: 100%;
 }
 
 
@@ -51,8 +50,8 @@ section>p{
 }
 
 #sliderHome .row{
-    height: 800px;
     padding: 0 40px;
+    height: 700px;
 }
 
 #sliderHome .col{
@@ -114,7 +113,8 @@ section>p{
     filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.231));
     background-repeat: no-repeat;
     background-size:inherit;
-    background-position: 50%;
+    background-position: center;
+    background-size: 90%;
 }
 
 
@@ -130,7 +130,7 @@ section>p{
     opacity: 1;
     transition: 2s;
     filter: blur(0px) drop-shadow(10px 7px 5px rgba(0, 0, 0, 0.231));
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-5%);
     z-index: 1;
     margin: auto;
 }
@@ -158,13 +158,22 @@ section>p{
 #nomeFuncionario{
     color: #000000;
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     text-align: start;
     opacity: 0;
     transition: opacity 1s ease;
     text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.1);
     font-size: 2.2vw;
 }
+
+#cargoFuncionario{
+    font-size: 1vw;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
 #sobreFuncionario{
     height: 260px;
     opacity: 0;
@@ -174,6 +183,10 @@ section>p{
     margin-bottom: 15px;
     font-size: 0.8vw;
 
+}
+
+#cargoFuncionarioMobile{
+    display: none;
 }
 
 #sobreFuncionario::-webkit-scrollbar {
@@ -286,11 +299,20 @@ display: none;
         overflow: hidden;
     }
 
+    #cargoFuncionario{
+        font-size: 1.3vw;
+    }
+
 }
 
 @media screen and (max-width: 1385px) {
     #nomeFuncionario{
         font-size: 1.9vw;
+        height: 70px;
+    }
+    #cargoFuncionario{
+        margin-top: 5px;
+        font-size: 1.6vw;
     }
 }
   
@@ -317,7 +339,6 @@ display: none;
 
     #nomeFuncionario{
         font-size: 30px;
-        height: 60px;
     }
 
     .active{
@@ -401,6 +422,15 @@ display: none;
     }
   }
 
+  @keyframes tooltiptext{
+    from {
+        transform: translateY(-30%);
+    }
+    to {
+        transform: translatey(0%);
+    }
+  }
+
 
 @media screen and (max-width:991px){
     #blockToFixHeaderMobile{
@@ -451,6 +481,17 @@ display: none;
     .background{
         background-size: 115%;
     }
+
+    #cargoFuncionario{
+        margin-bottom: 5px;
+        font-size: 2vw;
+        padding: 5px;
+    }
+    
+    #nomeFuncionario{
+        height: 60px;
+        padding: 5px;
+    }
     
 }
 
@@ -462,7 +503,7 @@ display: none;
         padding: 0px;
     }
     #nomeFuncionario{
-        text-align: center;
+        text-align: start;
         font-size: 4vw;
         height: auto;
         margin-top: 50px;
@@ -510,9 +551,6 @@ display: none;
         background-size: 119%;
     }
 
-    #sliderHome{
-        height: 640px;
-    }
 
     #sobreFuncionario, #nomeFuncionario, .example-2{
         display: none;
@@ -558,10 +596,10 @@ display: none;
       #sobreTooltip .tooltip:hover .tooltiptext {
         visibility: visible;
         opacity: 1;
+        animation: tooltiptext 0.5s ease;
       }
       
       .tooltiptext {
-        visibility: hidden;
         width: 300px;
         background-color: #0b3560ea;
         color: #fff;
@@ -574,10 +612,10 @@ display: none;
         left: 50%;
         margin-left: -150px;
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.5s ease;
         box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.231);
         max-height: 350px;
-        overflow: scroll;
+        overflow: hidden;
       }
       
       .tooltiptext::after {
@@ -593,7 +631,7 @@ display: none;
       
       #sobreTooltip .tooltip #iconSobreMobile {
         font-weight: bold;
-        font-size: 25px;
+        font-size: 28px;
         display: inline-block;
         width: 30px;
         height: 30px;
@@ -607,6 +645,25 @@ display: none;
       }
       #sliderHome .col{
         padding: 0px;
+    }
+
+    #cargoFuncionario{
+        display: none;
+    }
+    #cargoFuncionarioMobile{
+        display: inline-block;
+        font-size: 20px;
+        width: 63%;
+    }
+
+    #redesMobile i{
+        font-size: 20px;
+        margin-left: 25px;
+        color: white;
+    }
+
+    .tooltiptext p{
+        margin-top: 15px;
     }
       
 }
