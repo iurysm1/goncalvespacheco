@@ -275,29 +275,6 @@ function trocarDados(){
                     
                     break;
 
-                case 'guilherme':
-                    setOpacity(0)
-                    facebook.href="https://instagram.com/luanamarques0";
-                    instagram.href="https://instagram.com/adv.guilhermetavares";
-                    
-                    facebookMobile.href="https://instagram.com/luanamarques0";
-                    instagramMobile.href="https://instagram.com/adv.guilhermetavares";
-                    
-                    setTimeout(() => {
-                    setOpacity(1)
-                    nome.textContent="GUILHERME TAVARES DE JESUS"
-                    sobre.textContent="Formado em Direito pela Universidade do Sul de Santa Catarina, possui especialização em Direito Material Civil."
-                    cargo.textContent="Associado"
-    
-    
-                    nomeMobile.textContent="GUILHERME TAVARES DE JESUS"
-                    sobreMobile.textContent="Formado em Direito pela Universidade do Sul de Santa Catarina, possui especialização em Direito Material Civil."
-                    cargoMobile.textContent="Associado"
-    
-                    
-                    }, 900);
-                    
-                    break;
                 case 'joao':
                     setOpacity(0)
                     facebook.href="https://instagram.com/luanamarques0";
