@@ -1,3 +1,5 @@
+
+
 var navbarNav=document.getElementById('navbarNav');
 var checkbox = document.getElementById('checkbox')
   
@@ -32,6 +34,12 @@ var checkbox = document.getElementById('checkbox')
 
 
   });
+
+
+
+  export function isElementVisibleExport(element){
+      return isElementVisible(element)
+  }
 
   
   

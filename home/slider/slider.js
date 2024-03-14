@@ -1,6 +1,5 @@
+
 var backgrounds = document.querySelectorAll('.background');
-
-
 
 const slider = document.querySelector('.slider-images');
 
@@ -24,6 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
     
     setOpacity(1)
 });
+
+
 
 function updateSlider(){
 
@@ -126,7 +127,7 @@ function prevSlide(){
 
 }
 
-startSlider()
+
 
 function pauseSlider(){
     clearInterval(pauserSlide)
@@ -135,6 +136,8 @@ function pauseSlider(){
 function startSlider(){
     pauserSlide=setInterval(updateSlider,7000)
 }
+
+startSlider()
 
 const classePauseSlide = document.querySelectorAll('.sliderFuncionarios');
 

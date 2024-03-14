@@ -5,15 +5,24 @@ body{
     background-color: #4d4d4d !important;
 }
 
+
+
 section{
     background-color: white;
-    height: 800px;
 }
 
 
 
 .slider-main>img{
     user-select: none;
+}
+
+#tituloSlider h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 2.5vw;
+    color: black;
+    font-weight: 590;
 }
 
 .slider-main{
@@ -26,7 +35,7 @@ section{
 #sliderConteudo{
     display: inline-block;
     overflow: hidden;
-
+    width: 100%;
 }
 
 
@@ -48,12 +57,12 @@ section>p{
 
 }
 
-.row{
-    height: 800px;
+#sliderHome .row{
     padding: 0 40px;
+    height: 800px;
 }
 
-.col{
+#sliderHome .col{
     padding: 40px;
 }
 
@@ -69,6 +78,10 @@ section>p{
     height: 100%;
     top: 0;
     z-index: -1;
+}
+
+#descricaoSlider{
+    padding-left: 80px !important;
 }
 
 #imagemSlider{
@@ -108,8 +121,11 @@ section>p{
     filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.231));
     background-repeat: no-repeat;
     background-size:inherit;
-    background-position: 50%;
+    background-position: center;
+    background-size: 70%;
 }
+
+
 
 .slider-images>img.next{
     opacity: 1;
@@ -122,7 +138,7 @@ section>p{
     opacity: 1;
     transition: 2s;
     filter: blur(0px) drop-shadow(10px 7px 5px rgba(0, 0, 0, 0.231));
-    transform: scale(1.1);
+    transform: scale(1.1) translateY(-5%);
     z-index: 1;
     margin: auto;
 }
@@ -150,13 +166,22 @@ section>p{
 #nomeFuncionario{
     color: #000000;
     font-weight: 900;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     text-align: start;
     opacity: 0;
     transition: opacity 1s ease;
     text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.1);
     font-size: 2.2vw;
 }
+
+#cargoFuncionario{
+    font-size: 1vw;
+    font-weight: 300;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
 #sobreFuncionario{
     height: 260px;
     opacity: 0;
@@ -168,6 +193,10 @@ section>p{
 
 }
 
+#cargoFuncionarioMobile{
+    display: none;
+}
+
 #sobreFuncionario::-webkit-scrollbar {
     width: 8px;
 }
@@ -177,6 +206,7 @@ section>p{
     border-radius: 5px; 
 
 }
+
 
 #sobreFuncionario::-webkit-scrollbar-thumb {
     background: #888;
@@ -267,13 +297,40 @@ section>p{
     background-color: #1877F2;
   }
 
- #sobreTooltip{
-    display: none;
- }
+#sobreTooltip{
+display: none;
+}
+
+
+@media screen and (max-width: 1920px) {
+    #sliderHome .row{
+        height: 800px;
+    }
+    .background{
+        background-size: 90%;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+    #sobreFuncionario{
+        overflow: hidden;
+    }
+
+    #cargoFuncionario{
+        font-size: 1.3vw;
+    }
+
+}
 
 @media screen and (max-width: 1385px) {
     #nomeFuncionario{
         font-size: 1.9vw;
+        height: 70px;
+    }
+    #cargoFuncionario{
+        margin-top: 5px;
+        font-size: 1.6vw;
     }
 }
   
@@ -282,9 +339,7 @@ section>p{
     
 
     #sobreFuncionario{
-        font-size: 1vw;
-        overflow: scroll;
-        padding: 8px;
+        font-size: 1.2vw;
     }
 }
 
@@ -302,7 +357,6 @@ section>p{
 
     #nomeFuncionario{
         font-size: 30px;
-        height: 60px;
     }
 
     .active{
@@ -324,6 +378,10 @@ section>p{
         font-size: 1.3vw;
     }
    
+}
+
+.toggle{
+    display: none;
 }
 
 .prev-button, .next-button {
@@ -382,8 +440,20 @@ section>p{
     }
   }
 
+  @keyframes tooltiptext{
+    from {
+        transform: translateY(-30%);
+    }
+    to {
+        transform: translatey(0%);
+    }
+  }
+
 
 @media screen and (max-width:991px){
+    #blockToFixHeaderMobile{
+        display: block;
+    }
 
     #nomeFuncionario{
         font-size: 3vw;
@@ -405,9 +475,23 @@ section>p{
         background-size: 120%;
     }
 
+    #sliderHome .col {
+        padding: 0px;
+    }
+    #descricaoSlider {
+        padding-left: 33px !important;
+    }
+
 }
 
-@media screen and (max-width:767px){
+@media screen and (max-width:768px){
+
+    #descricaoSlider{
+        padding-left: 40px !important;
+    }
+    .toggle{
+        display: flex;
+    }
 
     .active{
         transform: scale(0.7) !important;
@@ -422,18 +506,33 @@ section>p{
     .background{
         background-size: 115%;
     }
+
+    #cargoFuncionario{
+        margin-bottom: 5px;
+        font-size: 2vw;
+        padding: 5px;
+    }
+    
+    #nomeFuncionario{
+        height: 60px;
+        padding: 5px;
+    }
+
+    #sliderHome .col{
+        padding: 0px 15px;
+    }
     
 }
 
 @media screen and (max-width:706px){
-    .row{
+    #sliderHome .row{
         display: block;
     }
     #descricaoSlider{
         padding: 0px;
     }
     #nomeFuncionario{
-        text-align: center;
+        text-align: start;
         font-size: 4vw;
         height: auto;
         margin-top: 50px;
@@ -444,7 +543,7 @@ section>p{
     }
     #imagemSlider{
         padding: 0px;
-        height: 400px;
+        height: 423px;
     }
 
     .background{
@@ -452,11 +551,11 @@ section>p{
     }
 
     .next{
-        transform: translate(-80%, 30%) scale(0.4) !important;
+        transform: translate(-100%, 20%) scale(0.4) !important;
     }
 
     .previous{
-        transform: translate(80%, 30%) scale(0.4) !important;
+        transform: translate(100%, 20%) scale(0.4) !important;
     }
 
     .inactive{
@@ -466,6 +565,10 @@ section>p{
 }
 
 @media screen and (max-width:600px){
+
+    #descricaoSlider{
+        padding-left: 0px !important;
+    }
     #sobreFuncionario{
         font-size: 2.3vw;
     }
@@ -477,8 +580,12 @@ section>p{
         background-size: 119%;
     }
 
-    #sliderHome{
-        height: 640px;
+    .next{
+        transform: translate(-80%,20%) scale(0.4)!important;
+    }
+
+    .previous{
+        transform: translate(80%,20%) scale(0.4)!important;
     }
 
     #sobreFuncionario, #nomeFuncionario, .example-2{
@@ -489,10 +596,11 @@ section>p{
         width: 100%;
     }
 
-    .row{
+    #sliderHome .row{
         width: 100%;
         margin: 0;
         padding: 20px;
+        height: auto;
     }
 
     #nomeFuncionarioMobile{
@@ -508,28 +616,28 @@ section>p{
     }
 
     #sobreTooltip{
-        margin: 30px 0;
+        margin: 20px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .tooltip {
+    #sobreTooltip .tooltip {
         opacity: 1;
         position: relative;
         display: inline-block;
         cursor: pointer;
-        font-family: "Arial", sans-serif;
       }
       
-      .tooltip:hover .tooltiptext {
+      #sobreTooltip .tooltip:hover .tooltiptext {
         visibility: visible;
         opacity: 1;
+        pointer-events: auto;
+        animation: tooltiptext 0.5s ease;
       }
       
       .tooltiptext {
-        visibility: hidden;
         width: 300px;
         background-color: #0b3560ea;
         color: #fff;
@@ -542,10 +650,11 @@ section>p{
         left: 50%;
         margin-left: -150px;
         opacity: 0;
-        transition: opacity 0.3s ease;
+        transition: opacity 0.5s ease;
         box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.231);
         max-height: 350px;
-        overflow: scroll;
+        overflow: hidden;
+        pointer-events: none;
       }
       
       .tooltiptext::after {
@@ -559,19 +668,42 @@ section>p{
         border-color: transparent transparent #0b3560ea transparent;
       }
       
-      .tooltip .icon {
+      #sobreTooltip .tooltip #iconSobreMobile {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 28px;
         display: inline-block;
         width: 30px;
         height: 30px;
-        background-color: #0B3660;
-        color: #fff;
+        color: #0B3660;
         border-radius: 50%;
         text-align: center;
         line-height: 30px;
-        box-shadow: 4px 3px 4px rgba(0, 0, 0, 0.231);
+        filter: drop-shadow(4px 3px 4px rgba(0, 0, 0, 0.231));
+        transition: opacity 1s ease;
+        opacity: 0;
       }
+      #sliderHome .col{
+        padding: 0px;
+    }
+
+    #cargoFuncionario{
+        display: none;
+    }
+    #cargoFuncionarioMobile{
+        display: inline-block;
+        font-size: 20px;
+        width: 63%;
+    }
+
+    #redesMobile i{
+        font-size: 20px;
+        margin-left: 25px;
+        color: white;
+    }
+
+    .tooltiptext p{
+        margin-top: 15px;
+    }
       
 }
 
@@ -580,13 +712,14 @@ section>p{
         transform: scale(0.7) !important;
     }
     #sliderHome{
-        height: 540px;
+        height: auto;
     }
 
     #sobreTooltip{
         margin: 0;
+        margin-top: 20px;
     }
-    .row{
+    #sliderHome .row{
         height: 540px;
         padding: 20px;
     }
@@ -594,5 +727,6 @@ section>p{
         margin: 0;
     }
 }
+
 
 

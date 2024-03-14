@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gonçalves&Pacheco</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="style-NAV.css">
-    <link rel="stylesheet" href="style-FOOTER.css">
+    <link rel="stylesheet" href="/style-NAV.css">
+    <link rel="stylesheet" href="/style-FOOTER.css">
     <link rel="stylesheet" href="slider/slider.css">
+    <link rel="stylesheet" href="primeiroSlogan/primeiroSlogan.css">
     <script src="https://kit.fontawesome.com/08a72f5c5b.js" crossorigin="anonymous"></script>
 
 
@@ -28,7 +29,7 @@
                         <div class="offcanvas offcanvas-end navbar-toggler" id="navbarNav">
                             <div style="max-height: 900px; overflow-y: auto;">
                                 <ul class="navbar-nav">
-                                    <img src="imagens/logobranca215px.png" alt="logo da empresa">
+                                    <img src="/imagens/logos/logobranca215px.png" alt="logo da empresa">
                                     <li class="nav-item"  >
                                     <a id="activenavitem" class="nav-link" aria-current="page" href="#">HOME<i class="fa-solid fa-house"></i></a>
                                     </li>
@@ -54,10 +55,10 @@
                 </div>
                 <div class="col m-auto colunaLogo">
                     <picture>
-                        <source class="logoHeader" media="(max-width: 4252px)" srcset="imagens/logobranca241px.png" type="image/png">
-                        <source class="logoHeader" media="(max-width: 590px)" srcset="imagens/logo68px.png" type="image/png">
-                        <source class="logoHeader" media="(max-width: 900px)" srcset="imagens/logo90px.png" type="image/png">
-                        <img class="logoHeader" src="imagens/logonavbar137px.png" alt="logo da empresa">
+                        <source class="logoHeader" media="(max-width: 4252px)" srcset="/imagens/logos/logobranca241px.png" type="image/png">
+                        <source class="logoHeader" media="(max-width: 590px)" srcset="/imagens/logos/logo68px.png" type="image/png">
+                        <source class="logoHeader" media="(max-width: 900px)" srcset="/imagens/logos/logo90px.png" type="image/png">
+                        <img class="logoHeader" src="/imagens/logos/logonavbar137px.png" alt="logo da empresa">
                     </picture>
                   
                 </div>
@@ -96,8 +97,28 @@
     <main>
         <div id="blockToFixHeaderMobile"></div>
         <section id="primeiroSlogan">
-            
+            <h1 id="fraseH1">Seus direitos, nossa prioridade, em todos os momentos.</h1>
+            <h2 id="fraseH2">Gonçalves Pacheco
+                <br>
+                Faustina & Batisti
+            </h2>
+            <h3 id="fraseH3">Advogados associados</h3>
+            <div id="quemSomosDiv"><a href=""><span id="quemSomosBotao">Quem somos?<i class="fa fa-arrow-right fa-lg"></i></span></a></div>
         </section>
+
+        <section id="areasAtuacao" class="container-fluid">
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+        </section>
+
         <section class="slider-main" id="sliderHome">
             <div id="tituloSlider"><h1>Nossos colaboradores!</h1></div>
             <button class="prev-button sliderFuncionarios" onclick="prevSlide()">&#10094;</button>
@@ -131,7 +152,7 @@
                         <div class="tooltiptext">
                             <h3 id="cargoFuncionarioMobile">Sócio Fundador</h3>
                             <span id="redesMobile">
-                                <a href="" id="instagramMobileSlider"><i class="fa fa-instagram fa-lg"></i></a>
+                                <a href="https://instagram.com/orlandogoncalvespa" id="instagramMobileSlider"><i class="fa fa-instagram fa-lg"></i></a>
                                 <a href="" id="facebookMobileSlider"><i class="fa fa-facebook fa-lg"></i></a>
                             </span>
                             <p id="sobreFuncionarioMobile">Formado em Direito pela Universidade do Sul de Santa Catarina, Pós-graduado em Direito Processual Civil e com especialidade em Direito Empresarial</p>
@@ -141,30 +162,30 @@
                 </div>
                 <div class="col" id="imagemSlider">
                   <div class="slider-images sliderFuncionarios" id="backgroundImage">
-                        <img src="imagens/colaboradores/orlando.png" alt="orlando" class="slider-image active">
-                        <img src="imagens/colaboradores/marlon.png" alt="marlon" class="slider-image next">
-                        <img src="imagens/colaboradores/eduardo.png" alt="eduardo" class="slider-image previous">
-                        <img src="imagens/colaboradores/luana.png" alt="luana" class="slider-image inactive">
-                        <img src="imagens/colaboradores/joao.png" alt="joao" class="slider-image inactive">
-                        <img src="imagens/colaboradores/melina.png" alt="melina" class="slider-image inactive">
-                        <img src="imagens/colaboradores/felipe.png" alt="felipe" class="slider-image inactive">
-                        <img src="imagens/colaboradores/isabella.png" alt="isabella" class="slider-image inactive">
-                        <img src="imagens/colaboradores/anna.png" alt="anna" class="slider-image inactive">
-                        <img src="imagens/colaboradores/suzani.png" alt="suzani" class="slider-image inactive">
+                        <img src="/imagens/sliderHome/colaboradores/orlando.png" alt="orlando" class="slider-image active">
+                        <img src="/imagens/sliderHome/colaboradores/marlon.png" alt="marlon" class="slider-image next">
+                        <img src="/imagens/sliderHome/colaboradores/eduardo.png" alt="eduardo" class="slider-image previous">
+                        <img src="/imagens/sliderHome/colaboradores/luana.png" alt="luana" class="slider-image inactive">
+                        <img src="/imagens/sliderHome/colaboradores/joao.png" alt="joao" class="slider-image inactive">
+                        <img src="/imagens/sliderHome/colaboradores/melina.png" alt="melina" class="slider-image inactive">
+                        <img src="/imagens/sliderHome/colaboradores/felipe.png" alt="felipe" class="slider-image inactive">
+                        <img src="/imagens/sliderHome/colaboradores/isabella.png" alt="isabella" class="slider-image inactive">
+                        <img src="/imagens/sliderHome/colaboradores/anna.png" alt="anna" class="slider-image inactive">
+                        <img src="/imagens/sliderHome/colaboradores/suzani.png" alt="suzani" class="slider-image inactive">
 
                   </div>
                   <div id="backgrounds">
-                      <div class="background" style="background-image: url('imagens/colaboradores/orlando.svg'); opacity: 1;"></div>
-                      <div class="background" style="background-image: url('./imagens/colaboradores/marlon.svg');"></div>
-                      <div class="background" style="background-image: url('./imagens/colaboradores/eduardo.svg');"></div>
-                      <div class="background" style="background-image: url('./imagens/colaboradores/luana.svg');"></div>
-                      <div class="background" style="background-image: url('./imagens/colaboradores/joao.svg');"></div>
-                      <div class="background" style="background-image: url('./imagens/colaboradores/melina.svg');"></div>
-                      <div class="background" style="background-image: url('./imagens/colaboradores/felipe.svg');"></div>
-                      <div class="background" style="background-image: url('./imagens/colaboradores/isabella.svg');"></div>
-                      <div class="background" style="background-image: url('./imagens/colaboradores/anna.svg');
+                      <div class="background" style="background-image: url('/imagens/sliderHome/colaboradores/orlando.svg'); opacity: 1;"></div>
+                      <div class="background" style="background-image: url('/imagens/sliderHome/colaboradores/marlon.svg');"></div>
+                      <div class="background" style="background-image: url('/imagens/sliderHome/colaboradores/eduardo.svg');"></div>
+                      <div class="background" style="background-image: url('/imagens/sliderHome/colaboradores/luana.svg');"></div>
+                      <div class="background" style="background-image: url('/imagens/sliderHome/colaboradores/joao.svg');"></div>
+                      <div class="background" style="background-image: url('/imagens/sliderHome/colaboradores/melina.svg');"></div>
+                      <div class="background" style="background-image: url('/imagens/sliderHome/colaboradores/felipe.svg');"></div>
+                      <div class="background" style="background-image: url('/imagens/sliderHome/colaboradores/isabella.svg');"></div>
+                      <div class="background" style="background-image: url('/imagens/sliderHome/colaboradores/anna.svg');
                       "></div>
-                      <div class="background" style="background-image: url('./imagens/colaboradores/guilherme.svg');"></div>
+                      <div class="background" style="background-image: url('/imagens/sliderHome/colaboradores/guilherme.svg');"></div>
                   </div>
                 </div>
               </div>
@@ -181,7 +202,7 @@
                     <div class="p-3">
                         <ul>
                             <li>
-                                <img src="imagens/branca.png" alt="logo branca">
+                                <img src="/imagens/logos/branca.png" alt="logo branca">
                             </li>
                             <li>
                                 <p>Estrutura, conhecimento e a possibilidade de dar um atendimento seguro e qualificado. <hr>Experiência para obter uma melhor solução e estratégia processual.</p>
@@ -248,8 +269,9 @@
     </footer>
 
 
-    <script src="utilities.js"></script>
+    <script type="module" src="/utilities.js"></script>
     <script src="slider/slider.js"></script>
+    <script type="module" src="primeiroSlogan/primeiroSlogan.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
 </body>

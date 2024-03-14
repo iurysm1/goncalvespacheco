@@ -1,0 +1,237 @@
+#primeiroSlogan{
+    background-image: linear-gradient(to right, #30303dfd 55%, #30303d00 100%), url(/imagens/primeiroSlogan/background-primeiroslogan.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100%;
+    height: 565px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 100px;
+    justify-content: center;
+}
+
+#primeiroSlogan h1{
+    color: white;
+    font-size: 50px;
+    width: 800px;
+}
+
+#primeiroSlogan h2{
+    color: white;
+    opacity: 0;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 100;
+    font-size: 35px;
+}
+#primeiroSlogan h3{
+    color: rgb(165, 165, 165);
+    opacity: 0;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+.h1slide{
+    animation: slideRight 2s ease-in-out forwards;
+}
+.h2slide{
+    animation: slideDown 1s ease-in-out forwards;
+    animation-delay: 2s;
+}
+.h3slide{
+    animation: slideDown 1s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+#primeiroSlogan a{
+    width: auto;
+}
+
+#quemSomosBotao{
+    display: block;
+    height: 50px !important;
+    width: 200px;
+}
+
+#quemSomosDiv{
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: 40%;
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+  }
+  @keyframes slideDown {
+    0% {
+        transform: translateY(100%); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+  }
+
+
+@media screen and (max-width: 1440px) {
+
+    #primeiroSlogan{
+        padding-left: 80px;
+    }
+
+    #primeiroSlogan h1{
+        font-size: 2.8vw;
+        width: 50%;
+    }
+    
+    #primeiroSlogan h2{
+        color: white;
+        opacity: 0;
+        font-weight: 300;
+        font-size: 2vw;
+    }
+    #primeiroSlogan h3{
+        color: rgb(165, 165, 165);
+        opacity: 0;
+        margin: 0px;
+        padding: 0px;
+        font-weight: 300;
+        font-size: 1.3vw;
+    }
+
+}
+
+@media screen and (max-width: 1250px) {
+    #primeiroSlogan{
+        background-image: linear-gradient(to right, #30303dfd 60%, #30303d00 100%), url(/imagens/primeiroSlogan/background-primeiroslogan.png);
+        height: 480px;
+        
+    }
+
+    #primeiroSlogan h3{
+        font-size: 1.6vw;
+    }
+   
+}
+
+@media screen and (max-width: 915px) {
+    #primeiroSlogan{
+        background-image: linear-gradient(to right, #30303dfd 50%, #30303d00 100%), url(/imagens/primeiroSlogan/background-primeiroslogan.png);
+        background-position: 90%;
+        padding-left: 40px;
+    }
+
+    #primeiroSlogan h1{
+        width: 45%;
+        font-size: 2.7vw;
+    }
+}
+
+@media screen and (max-width: 828px) {
+    #primeiroSlogan{
+        height: 400px;
+        background-image: linear-gradient(to right, #30303dfd 55%, #30303d00 100%), url(/imagens/primeiroSlogan/background-primeiroslogan.png);
+    }
+
+    #primeiroSlogan h1{
+        width: 50%;
+        
+    }
+    
+    #primeiroSlogan h2{
+        font-size: 2.2vw;
+    }
+
+    #primeiroSlogan h3{
+        font-weight: 400;
+        font-size: 1.8vw;
+    }
+}
+
+
+@media screen and (max-width: 669px) {
+    
+    #primeiroSlogan{
+        height: 300px;
+    }
+
+    #primeiroSlogan h1{
+        width: 50%;
+        font-size: 2.9vw;
+        
+    }
+    
+    #primeiroSlogan h2{
+        font-size: 2.4vw;
+        
+    }
+
+    #primeiroSlogan h3{
+        font-weight: 300;
+        font-size: 2.2vw;
+    }
+    
+
+}
+
+@media screen and (max-width: 425px) {
+    
+    #primeiroSlogan{
+        background-image: linear-gradient(to top, #30303df1 50%, #30303d00 100%), url(/imagens/primeiroSlogan/Iustitia.png);
+        background-position: 100%;
+        background-size: cover;
+        height: 425px;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px 70px 20px;
+        justify-content: end;
+    }
+
+    #primeiroSlogan h1{
+        font-size: 5.5vw;
+        width: auto;
+    }
+    
+    #primeiroSlogan h2{
+        margin: 0px;
+        padding: 0px;
+        font-weight: 300;
+        font-size: 4.5vw;
+    }
+    #primeiroSlogan h3{
+        font-weight: 300;
+        font-size: 3.5vw;
+    }
+
+}
+
+@media screen and (max-width: 375px) {
+    
+    #primeiroSlogan{
+        height: 375px;
+    }
+    #primeiroSlogan h1{
+        font-size: 5.4vw;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    
+    #primeiroSlogan{
+        height: 320px;
+    }
+
+}
