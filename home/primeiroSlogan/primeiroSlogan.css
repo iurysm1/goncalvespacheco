@@ -36,7 +36,8 @@
 
 
 .h1slide{
-    animation: slideRight 2s ease-in-out forwards;
+    animation: slideRight 1s ease-in-out forwards;
+    
 }
 .h2slide{
     animation: slideDown 1s ease-in-out forwards;
@@ -48,22 +49,28 @@
 }
 
 #primeiroSlogan a{
-    width: auto;
-}
-
-#quemSomosBotao{
     display: block;
-    height: 50px !important;
     width: 200px;
 }
 
+#quemSomosBotao{
+    height: 50px !important;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-delay: 4s;
+    opacity: 0;
+}
+
 #quemSomosDiv{
+    margin-top: 60px;
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: 40%;
+    justify-content: flex-start;
 }
-
+  
 @keyframes slideRight {
     0% {
         opacity: 0;
@@ -82,6 +89,95 @@
         opacity: 1;
         transform: translateY(0); 
     }
+  }
+
+  .animated-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 36px;
+    border: 4px solid;
+    border-color: transparent;
+    font-size: 16px;
+    background-color: inherit;
+    border-radius: 100px;
+    font-weight: 600;
+    color: white;
+    box-shadow: 0 0 0 2px white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button svg {
+    position: absolute;
+    width: 24px;
+    fill: white;
+    z-index: 9;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .arr-1 {
+    right: 16px;
+  }
+  
+  .animated-button .arr-2 {
+    left: -25%;
+  }
+  
+  .animated-button .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button .text {
+    position: relative;
+    z-index: 1;
+    transform: translateX(-12px);
+    transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .animated-button:hover {
+    box-shadow: 0 0 0 12px transparent;
+    color: #212121;
+    border-radius: 12px;
+  }
+  
+  .animated-button:hover .arr-1 {
+    right: -25%;
+  }
+  
+  .animated-button:hover .arr-2 {
+    left: 16px;
+  }
+  
+  .animated-button:hover .text {
+    transform: translateX(12px);
+
+  }
+  
+  .animated-button:hover svg {
+    fill: #212121;
+  }
+  
+  .animated-button:active {
+    scale: 0.95;
+    box-shadow: 0 0 0 4px white;
+  }
+  
+  .animated-button:hover .circle {
+    width: 220px;
+    height: 220px;
+    opacity: 1;
   }
 
 
@@ -123,6 +219,35 @@
     #primeiroSlogan h3{
         font-size: 1.6vw;
     }
+
+    #primeiroSlogan a{
+        width: 180px;
+    }
+
+    #quemSomosDiv{
+        margin-top: 25px;
+    }
+    
+    #quemSomosBotao{
+        height: 45px !important;
+        width: 180px;
+        justify-content: start;
+    }
+
+    .animated-button{
+        padding: 10px 15px;
+        font-size: 14px;
+        width: 160px;
+    }
+
+    .animated-button:hover .arr-2 {
+        left: 6px;
+      }
+      
+      .animated-button:hover .text {
+        transform: translateX(23px);
+    
+      }
    
 }
 
@@ -137,6 +262,8 @@
         width: 45%;
         font-size: 2.7vw;
     }
+
+
 }
 
 @media screen and (max-width: 828px) {
@@ -157,6 +284,21 @@
     #primeiroSlogan h3{
         font-weight: 400;
         font-size: 1.8vw;
+    }
+
+    #quemSomosDiv{
+        margin-top: 40px;
+    }
+    
+    #quemSomosBotao{
+        height: 40px !important;
+        width: 170px;
+        
+    }
+
+    .animated-button{
+        padding: 8px 26px;
+        font-size: 12px;
     }
 }
 
@@ -209,11 +351,35 @@
         padding: 0px;
         font-weight: 300;
         font-size: 4.5vw;
+        
     }
     #primeiroSlogan h3{
         font-weight: 300;
         font-size: 3.5vw;
     }
+
+
+    #quemSomosDiv{
+        margin-top: 25px;
+        
+    }
+    
+    #quemSomosBotao{
+        height: 25px !important;
+        width: 150px;
+        
+    }
+
+    .animated-button{
+        padding: 5px 26px;
+        font-size: 12px;
+    }
+
+    .animated-button svg{
+        transform: scale(0.8) translateX(15px);
+        
+    }
+
 
 }
 
@@ -221,9 +387,32 @@
     
     #primeiroSlogan{
         height: 375px;
+        padding-bottom: 50px;
+        overflow: hidden;
     }
     #primeiroSlogan h1{
         font-size: 5.4vw;
+    }
+
+  
+
+    #quemSomosBotao{
+        height: 10px !important;
+        width: 130px;
+        
+    }
+
+    .animated-button{
+        padding: 2px 15px;
+        font-size: 10x;
+    }
+
+    .animated-button svg{
+        transform: scale(0.8) translateX(15px);
+        
+    }
+    #primeiroSlogan a {
+        width: 130px;
     }
 
 }
@@ -232,6 +421,28 @@
     
     #primeiroSlogan{
         height: 320px;
+        padding-bottom: 40px;
+    }
+
+   
+
+    #quemSomosBotao{
+        height: 8px !important;
+        width: 120px;
+        
+    }
+
+    .animated-button{
+        padding: 2px 14px;
+        font-size: 11px;
+    }
+
+    .animated-button svg{
+        transform: scale(0.7) translateX(12px);
+        
+    }
+    #primeiroSlogan a {
+        width: 120px;
     }
 
 }
