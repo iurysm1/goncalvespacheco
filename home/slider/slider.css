@@ -33,7 +33,6 @@ section{
 }
 
 #sliderConteudo{
-    display: inline-block;
     overflow: hidden;
     width: 100%;
 }
@@ -82,6 +81,23 @@ section>p{
 
 #descricaoSlider{
     padding-left: 80px !important;
+    margin: 0;
+}
+
+#tituloDivSlider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0 120px 0
+}
+
+#descricaoSlider h1{
+    width: auto;
+    border-bottom: 2px solid #587288;
+    padding: 0 12px 10px 12px; 
+    margin: 0;
+    position: relative;
+    left: 55%;    
 }
 
 #imagemSlider{
@@ -321,6 +337,10 @@ display: none;
         font-size: 1.3vw;
     }
 
+    #tituloDivSlider{
+        margin-bottom: 86px;
+    }
+
 }
 
 @media screen and (max-width: 1385px) {
@@ -377,7 +397,10 @@ display: none;
     #sobreFuncionario{
         font-size: 1.3vw;
     }
-   
+    #tituloDivSlider{
+        margin-bottom: 66px;
+    }
+
 }
 
 .toggle{
@@ -399,6 +422,18 @@ display: none;
     transition: 1s;
     
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+  }
 
 .prev-button:hover, .next-button:hover{
     transform: rotateY(180g);
@@ -562,6 +597,9 @@ display: none;
         transform: translate(0%, 100%) scale(0.1) !important;
 
     }
+    #tituloDivSlider h1{
+        left: 0;
+    }
 }
 
 @media screen and (max-width:600px){
@@ -575,7 +613,9 @@ display: none;
 }
 
 @media screen and (max-width:425px){
-    
+    #redesMobile a{
+        width: 17.5px;
+    }
     .background{
         background-size: 119%;
     }
@@ -681,6 +721,7 @@ display: none;
         filter: drop-shadow(4px 3px 4px rgba(0, 0, 0, 0.231));
         transition: opacity 1s ease;
         opacity: 0;
+        animation: pulse 2s infinite linear;
       }
       #sliderHome .col{
         padding: 0px;
@@ -701,6 +742,8 @@ display: none;
         color: white;
     }
 
+    
+
     .tooltiptext p{
         margin-top: 15px;
     }
@@ -720,7 +763,7 @@ display: none;
         margin-top: 20px;
     }
     #sliderHome .row{
-        height: 540px;
+        height: auto;
         padding: 20px;
     }
     #nomeFuncionarioMobile{

@@ -1,8 +1,27 @@
 @charset "UTF-8";
 
+
+
 #areasAtuacao{
     padding: 20px 170px;
+    text-shadow: 2px 1px 3px rgba(0, 0, 0, 0.1);
+    
+
 }
+
+.slideCard{
+    animation: slideDown 1s ease-in-out forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(100%); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+  }
 
 #areasAtuacao .card ::-webkit-scrollbar {
     width: 5px;
@@ -45,18 +64,32 @@ background-color: #363636;
 }
 
 .card {
+    opacity: 0;
     overflow: visible;
     width: 300px;
     height: 381px;
     border: none;
     margin: auto;
+    cursor: pointer;
   }
+
+.card:hover .content{
+    transform: translate(5px, -5px);
+    box-shadow: 2px 6px 12px #0b356055;
+
+}
+
+.card:hover #setaDireitaCar, .card:hover .back-content span{
+    transform: scale(1.1) translate(5px, -5px);
+    text-shadow: 2px 6px 8px #0b356055;
+
+}
   
   .content {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 300ms;
+    transition: all 300ms;
     box-shadow: 2px 3px 7px #0b356050;
     border-radius: 5px;
   }
@@ -104,6 +137,28 @@ background-color: #363636;
     justify-content: center;
     align-items: center;
     gap: 30px;
+  }
+
+  .back-content #saibaMais{
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 30%;
+  }
+  .back-content span{
+    height: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: all 300ms;
+
+  }
+
+  #setaDireitaCard{
+    height: 20px;
+    font-size: 16px;
+    margin-left: 10px;
+    transition: all 300ms;
+
   }
   .back-content i{
     margin-bottom: 20px;
@@ -181,47 +236,28 @@ background-color: #363636;
     object-position: center;
   }
   
-  .circle {
-    width: 90px;
-    height: 90px;
-    background-color: #0b356000;
-    color: #587288;
-    font-size: 20px;
+  #areasAtuacao .circle {
+    width: 140px;
+    height: 140px;
+    background-color: #587288;
+    border-radius: 50%;
     position: relative;
-    top: 80px;
-    left: 50px;
-    filter: blur(2px);
+    top: 0px;
+    left: 0px;
+    filter: blur(13px);
     animation: floating 3000ms infinite linear;
   }
   
-  #bottom {
-    background-color: #0b356000;
-    color: #0b3660;
-    font-size: 30px;
-    left: 180px;
-    top: -30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  #areasAtuacao  #bottom {
+    background-color: #0b3660;
+    width: 300px;
+    height: 300px;
+    left: 70px;
+    top: 40px;
     animation-delay: -800ms;
   }
   
-  #right {
-    
-    left: 220px;
-    top: -130px;
-    width: 30px;
-    height: 30px;
-    font-size: 15px;
-    animation-delay: -1800ms;
-  }
-
-  #left{
-    top: 80px;
-    left: 0px;
-    animation-delay: -2200ms;
-
-  }
+  
   
 .rotate{
     transform: rotateY(180deg) !important;
@@ -229,23 +265,41 @@ background-color: #363636;
 
   @keyframes floating {
     0% {
-      transform: translateY(0px) rotate(10deg);
+      transform: translateY(0px);
     }
   
     50% {
-      transform: translateY(10px) rotate(0deg);
+      transform: translateY(10px);
     }
   
     100% {
-      transform: translateY(0px) rotate(10deg);
+      transform: translateY(0px);
     }
   }
 
 
+@media screen and (max-width: 1440px) {
+    
+    #areasAtuacao{
+        
+        padding: 20px 12%;
+    }
+
+}
+
+@media screen and (max-width: 1224px) {
+    
+    #areasAtuacao{
+        
+        padding: 20px 5%;
+    }
+
+}
+
 @media screen and (max-width: 1024px) {
     
     #areasAtuacao{
-        padding: 20px 40px;
+        padding: 20px 0;
     }
     .card{
         transform: scale(0.9);
@@ -259,6 +313,8 @@ background-color: #363636;
     
 }
 
+
+
 @media screen and (max-width: 947px) {
     #areasAtuacao{
         padding: 20px 20px;
@@ -270,10 +326,6 @@ background-color: #363636;
         height: 301.75px;
     }
 
-    .back-content{
-
-    }
-    
     .front-content .badge {
         background-color: #000000c8;
         padding: 5px 10px;
@@ -310,4 +362,47 @@ background-color: #363636;
         left: 0px;
     
       }
+
+    
+}
+
+@media screen and (max-width: 768px) {
+   
+    
+    .back-content strong{
+        font-size: 14px;
+    }
+
+    .card{
+        width: 225px;
+        height: 287px;
+    }
+
+    .back-content #saibaMais{
+        top: 25%;
+    }
+
+    #areasAtuacao h1{
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+
+    #areasAtuacao .col{
+        height: 326px;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+    #areasAtuacao .col{
+        grid-template-columns: repeat(auto-fit, minmax(227px,1fr));
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    #tituloDivSlider{
+        margin-bottom: 0px;
+    }
+    
 }

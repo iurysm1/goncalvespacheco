@@ -1,6 +1,26 @@
+import * as utilidades from "/utilities.js";
+
+function animateIfVisible() {
+    
+    let divAreaAtuacao= document.getElementById('areasAtuacao')
+    if (utilidades.isElementVisibleExport(divAreaAtuacao)) {
+        let cards= document.querySelectorAll('.card').forEach(cardAtual=>{
+            cardAtual.classList.add('slideCard')
+
+        })
+    }else{
+        let cards= document.querySelectorAll('.card').forEach(cardAtual=>{
+            
+        })
+    }
+  }
+  
+  window.addEventListener('scroll', animateIfVisible);
+  animateIfVisible();
+
+
 document.querySelectorAll('.content').forEach(card => {
     card.addEventListener('click', function() {
-        console.log('teste')
         this.classList.toggle('rotate');
     });
     
