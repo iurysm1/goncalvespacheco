@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+#segundoSlogan{
+    overflow: hidden;
+    height: 460px;
+    /*background-color: #31313D;*/
+}
+
+#segundoSlogan .container-fluid{
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+#segundoSlogan .row{
+    padding: 40px;
+    height: 100% !important;
+}
+
+
+
+#segundoSlogan #direita{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 100%;
+}
+
+#faixaAzulHorizontalDireitaBorda{
+    height: 380px;
+    width: 960px;
+    margin-right: -40px;
+    background-image: linear-gradient(to right, #0b3560ab 0%, #0b356038 100%), url("/imagens/segundoSlogan/bannerM.png");
+    background-color: black;
+    background-size: cover;
+    border-radius: 200px 0 0 200px;
+}
+
+
+

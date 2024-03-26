@@ -32,6 +32,8 @@
     margin: 0px;
     padding: 0px;
     font-family: 'Montserrat', Arial, sans-serif;
+    user-select: none;
+
 }
 
 
