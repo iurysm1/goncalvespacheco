@@ -4,7 +4,7 @@
 #segundoSlogan{
     overflow: hidden;
     height: 460px;
-    /*background-color: #31313D;*/
+    background-color: #f9f9f9;
 }
 
 #segundoSlogan .container-fluid{
@@ -15,7 +15,7 @@
 }
 
 #segundoSlogan .row{
-    padding: 40px;
+    padding: 0 40px;
     height: 100% !important;
 }
 
@@ -23,20 +23,95 @@
 
 #segundoSlogan #direita{
     display: flex;
-    align-items: center;
-    justify-content: end;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    text-align: start;
     height: 100%;
+    padding: 20px;
 }
 
 #faixaAzulHorizontalDireitaBorda{
-    height: 380px;
-    width: 960px;
-    margin-right: -40px;
+    height: 460px;
+    margin-left: -40px;
     background-image: linear-gradient(to right, #0b3560ab 0%, #0b356038 100%), url("/imagens/segundoSlogan/bannerM.png");
     background-color: black;
     background-size: cover;
-    border-radius: 200px 0 0 200px;
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.221);
+    border-radius: 0 230px 230px 0;
 }
 
+.animationFaixaAzul{
+    animation: widthManager 2s ease-in-out forwards;
+}
+
+
+@keyframes widthManager {
+    0%{
+        width: 0%;
+        border-radius: 0;
+
+    }
+    100%{
+        width: 110%;
+        border-radius: 0 230px 230px 0;
+    }
+}
+
+
+#segundoSlogan .container {
+    --input-focus: #587288;
+    --input-out-of-focus: #ccc;
+    --bg-color: #fff;
+    --bg-color-alt: #666;
+    --main-color: #323232;
+    position: relative;
+    pointer-events: none;
+}
+  
+#segundoSlogan .container input {
+    position: absolute;
+    opacity: 0;
+}
+  
+#segundoSlogan .checkmark {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    box-shadow: 4px 4px var(--main-color);
+    background-color: var(--input-out-of-focus);
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
+#segundoSlogan .checkmark p{
+    margin-left: 200%;
+}
+
+#segundoSlogan .container input:checked ~ .checkmark {
+background-color: var(--input-focus);
+}
+
+#segundoSlogan .checkmark:after {
+content: "";
+width: 7px;
+height: 15px;
+position: absolute;
+top: 2px;
+left: 8px;
+display: none;
+border: solid var(--bg-color);
+border-width: 0 2.5px 2.5px 0;
+transform: rotate(45deg);
+}
+
+#segundoSlogan .container input:checked ~ .checkmark:after {
+display: block;
+}
+  
 
 

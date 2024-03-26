@@ -92,10 +92,6 @@ section>p{
 }
 
 #descricaoSlider h1{
-    width: auto;
-    border-bottom: 2px solid #587288;
-    padding: 0 12px 10px 12px; 
-    margin: 0;
     position: relative;
     left: 55%;    
 }
@@ -188,6 +184,7 @@ section>p{
     transition: opacity 1s ease;
     text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.1);
     font-size: 2.2vw;
+    height: 102px;
 }
 
 #cargoFuncionario{

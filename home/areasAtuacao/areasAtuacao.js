@@ -8,10 +8,6 @@ function animateIfVisible() {
             cardAtual.classList.add('slideCard')
 
         })
-    }else{
-        let cards= document.querySelectorAll('.card').forEach(cardAtual=>{
-            
-        })
     }
   }
   
